@@ -1,0 +1,89 @@
+/* Basic styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .navbar_logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar_menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    transition: max-height 0.3s ease-in-out;
+    /* animation: slideDown 1s ease-in-out; */
+    overflow: hidden;
+
+  }
+  
+  .navbar_menu a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar_toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar_menu {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem 0;
+      transition: all 0.5s ease-in-out;
+      animation: slideDown 0.5s ease-in-out;
+    }
+  
+    .navbar_menu_open {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .navbar_toggle {
+      display: flex;
+      justify-self: flex-end;
+    }
+  }
+  
+
+  @keyframes slideDown {
+    from {
+      top: -200px;
+      opacity: 0;
+    }
+    to {
+      top: 60px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      top: 60px;
+      opacity: 1;
+    }
+    to {
+      top: -200px;
+      opacity: 0;
+    }
+  }
