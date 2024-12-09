@@ -85,7 +85,7 @@
         </div>
         <div class="container">
             <b class="head">REGISTER</b>
-            <form class="form">
+            <form class="form" method="POST" action="http://44.202.147.131:3000/api/register" id="myForm">
                 <div class="formt">
                     Faculty / Research Scholar / Student
                     <select name="category" required>
@@ -136,8 +136,8 @@
                     </select>
                 </div>
                 <div class="formt">
-                    Amount Paid or Not (Screenshot)
-                    <input type="file" name="payment_screenshot" style="border: none;" accept="image/*" required />
+                    Amount Paid or Not<br>(Please enter the drive link of the screenshot)<br><b>Leave Blank if not paid</b>
+                    <input type="text" name="payment_screenshot" placeholder="Drive Link"/>
                 </div>
                 <div class="formt">
                     Mode: Online or Offline
@@ -145,6 +145,15 @@
                         <option value="Online" selected>Online</option>
                         <option value="Offline">Offline</option>
                     </select>
+                </div>
+                <div class="formt">
+                    Accomodation for
+                    <div>
+                        <input type="radio" name="accomodation" value="0 days" checked required />0 days
+                        <input type="radio" name="accomodation" value="1 days"  />1 days
+                        <input type="radio" name="accomodation" value="2 days"  />2 days
+                        <input type="radio" name="accomodation" value="3 days"  />3 days
+                    </div>
                 </div>
                 <div style="margin: 10px;">
                     <input type="checkbox" required> I have read the NOTICE fully

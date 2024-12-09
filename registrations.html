@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/registrations.css">
+    <title>Registrations</title>
+    <style>
+        table {
+            /* width: 100vw; */
+            /* border-collapse: collapse; */
+            margin-top: 20px;
+            /* overflow-x: auto; */
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registrations</h1>
+    <div class="registrationstable">
+    <button id="downloadCSV">Download as CSV</button>
+    <button id="downloadExcel">Download as Excel</button>
+    <table id="registrationsTable" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>category</th>
+                <th>college</th>
+                <th>dept</th>
+                <th>designation</th>
+                <th>year</th>
+                <th>role</th>
+                <th>payment</th>
+                <th>mode</th>
+                <th>accommod.</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+    </div>
+    <!-- <div class="container" id="container"></div> -->
+
+    <!-- <script>
+    async function loadRegistrations() {
+            try {
+                const response = await fetch('http://localhost:3000/registrations');
+                const registrations = await response.json();
+
+                // Get the table body
+                const tableBody = document.getElementById('container');
+                
+                // Clear the table body (if there is old data)
+                tableBody.innerHTML = '';
+
+                // Populate the table with the fetched data
+                registrations.forEach((registration) => {
+                    const card = document.createElement('div');
+                    card.classList.add('registrations');
+                    card.innerHTML = `
+                        <h4>${registration.name}</h4>
+                        <div class='registrationstext'>
+                        Email: ${registration.email}<br>
+                        Phone: ${registration.phone}<br>
+                        category: ${registration.phone}<br>
+                        college: ${ registration.college}<br>
+                        department: ${registration.department}<br>
+                        designation: ${ registration.designation}<br>
+                        student_year: ${ registration.student_year}<br>
+                        role: ${ registration.role}<br>
+                        payment_screenshot: ${ registration.payment_screenshot}<br>
+                        mode: ${ registration.mode}<br>
+                        accommodation: ${ registration.accommodation}<br>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading registrations:', error);
+            }
+        }
+
+        // Load registrations on page load
+        document.addEventListener('DOMContentLoaded', loadRegistrations);
+</script> -->
+
+<script>
+    // Fetch registrations from the backend
+    async function loadRegistrations() {
+        try {
+            const response = await fetch('http://44.202.147.131:3000/api/registrations');
+            const registrations = await response.json();
+
+            // Get the table body
+            const tableBody = document.getElementById('registrationsTable').querySelector('tbody');
+            
+            // Clear the table body (if there is old data)
+            tableBody.innerHTML = '';
+
+            // Populate the table with the fetched data
+            registrations.forEach((registration) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${registration.name}</td>
+                    <td>${registration.email}</td>
+                    <td>${registration.category}</td>
+                    <td>${registration.college}</td>
+                    <td>${registration.department}</td>
+                    <td>${registration.designation}</td>
+                    <td>${registration.student_year}</td>
+                    <td>${registration.role}</td>
+                    <td>${registration.payment_screenshot}</td>
+                    <td>${registration.mode}</td>
+                    <td>${registration.accommodation}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        } catch (error) {
+            console.error('Error loading registrations:', error);
+        }
+    }
+
+    // Load registrations on page load
+    document.addEventListener('DOMContentLoaded', loadRegistrations);
+
+    document.getElementById('downloadCSV').addEventListener('click', function () {
+            const table = document.getElementById('registrationsTable');
+            let csv = [];
+            for (const row of table.rows) {
+                const cells = Array.from(row.cells).map(cell => `"${cell.textContent}"`);
+                csv.push(cells.join(','));
+            }
+            const csvContent = csv.join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'table_data.csv';
+            link.click();
+        });
+
+        // Download as Excel
+        document.getElementById('downloadExcel').addEventListener('click', function () {
+            const table = document.getElementById('registrationsTable');
+            let xml = `
+                <table xmlns:o="urn:schemas-microsoft-com:office:office" 
+                       xmlns:x="urn:schemas-microsoft-com:office:excel" 
+                       xmlns="http://www.w3.org/TR/REC-html40">
+                    <thead>`;
+            
+            // Add headers
+            for (const cell of table.tHead.rows[0].cells) {
+                xml += `<th>${cell.textContent}</th>`;
+            }
+            xml += `</thead><tbody>`;
+            
+            // Add rows
+            for (const row of table.tBodies[0].rows) {
+                xml += `<tr>`;
+                for (const cell of row.cells) {
+                    xml += `<td>${cell.textContent}</td>`;
+                }
+                xml += `</tr>`;
+            }
+            xml += `</tbody></table>`;
+            
+            const blob = new Blob([xml], { type: 'application/vnd.ms-excel' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'table_data.xls';
+            link.click();
+        });
+</script>
+
+</body>
+</html>

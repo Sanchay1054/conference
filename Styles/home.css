@@ -349,6 +349,7 @@ th{
     }
     .date{
         flex-direction: column;
+        height: 900px;
     }
     .about{
         padding:1vh;
