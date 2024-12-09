@@ -98,7 +98,7 @@
     // Fetch registrations from the backend
     async function loadRegistrations() {
         try {
-            const response = await fetch('http://44.202.147.131:3000/api/registrations');
+            const response = await fetch('/api/registrations');
             const registrations = await response.json();
 
             // Get the table body
