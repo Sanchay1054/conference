@@ -98,7 +98,7 @@
     // Fetch registrations from the backend
     async function loadRegistrations() {
         try {
-            const response = await fetch('/api/registrations');
+            const response = await fetch('https://conference-backend-2.onrender.com/api/registrations');
             const registrations = await response.json();
 
             // Get the table body
