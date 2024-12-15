@@ -1,14 +1,62 @@
 <html>
     <head>
         <title>Register</title>
-        <link rel="stylesheet" href="./Styles/register.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="./Styles/register.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link  rel="stylesheet" href="./Styles/navbar.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="navbar">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)</div>
+        <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)</div>
+        <div class="navigator">
+            <nav class="navbar">
+                <div class="navhead">ICAMAC25</div>
+                <button class="navbar-toggler">
+                    Menu
+                </button>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="importantdates.html" class="nav-link"><i class="bi bi-calendar2-event-fill"></i> Important Dates</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle"><i class="bi bi-send-fill"></i> Registration</div>
+                        <ul class="dropdown-menu">
+                            <li><a href="travel.html" class="dropdown-item"><i class="bi bi-backpack-fill"></i> Travel</a></li>
+                            <li><a href="register.html" class="dropdown-item"><i class="bi bi-send-fill"></i> Registration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invitedspeakers.html" class="nav-link"><i class="bi bi-megaphone-fill"></i> Keynote Speakers</a></li>
+                    </li>
+                    <li class="nav-item">
+                            <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contactus.html" class="nav-link"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+            <div class="container">
+                <div class="head">Registration</div>
+                <div class="submissiontext">Conference registration starts on January 25th 2025 and ends on 15th 
+                    February, 2025. All the conference participants are requested to submit the registration 
+                    fees successfully. Furthermore, for each paper/poster, at least one author can attend and 
+                    pay the registration fee. In addition, the delegates can choose various options to 
+                    participate in the conference.</div>
+            </div>
         <div class="registerhead">
             <div>
                 <b>Bank Details: </b><br>
@@ -56,32 +104,48 @@
         </div>
         <div class="container">
             <b class="registerhead" style="margin: 0px; padding: 0px;">Fee Details<br>Kindly Pay the Fee with the above details</b>
-            <table class="table table-bordered table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Category</th>
-                        <th>Amount</th>
-                    </tr>
+            <table class="table table-bordered table-striped text-center align-middle">
+                <thead class="table-light">
+                  <tr>
+                    <th colspan="2">Categories</th>
+                    <th>Registration Amount</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Faculty</td>
-                        <td>1500</td>
-                    </tr>
-                    <tr>
-                        <td>PG Student / Research Scholar</td>
-                        <td>1000</td>
-                    </tr>
-                    <tr>
-                        <td>Listener</td>
-                        <td>750</td>
-                    </tr>
-                    <tr>
-                        <td>Foreigners</td>
-                        <td>40 USD</td>
-                    </tr>
+                  <!-- Indian Participants -->
+                  <tr>
+                    <th colspan="3" class="bg-secondary text-white">Indian Participants</th>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Faculty/Scientist from Academic/Research institutions</td>
+                    <td>Rs. 1,500</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Full-time Research Scholars (Postdoctoral/Ph.D) / P.G Students</td>
+                    <td>Rs. 1,000</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Participants (non-authors)</td>
+                    <td>Rs. 750</td>
+                  </tr>
+                  <!-- International Participants -->
+                  <tr>
+                    <th colspan="3" class="bg-secondary text-white">International Participants (Outside India)</th>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Onsite Faculty/Scientist from Academic/Research institutions</td>
+                    <td>USD 40</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Online Delegates with presentation</td>
+                    <td>USD 30</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Online Participants</td>
+                    <td>USD 25</td>
+                  </tr>
                 </tbody>
-            </table>
+              </table>
         </div>
         <div class="container">
             <b class="head">REGISTER</b>
@@ -156,18 +220,27 @@
                     </div>
                 </div>
                 <div style="margin: 10px;">
-                    <input type="checkbox" required> I have read the NOTICE fully
+                    <input type="checkbox" required> I have read and agree with all the above remarks
                 </div>
                 <button type="submit" class="button">Submit</button>
             </form>
 
             <div class="head">NOTICE</div>
             <div class="text">
-                1. Accommodation will be on payment basis.<br>
-2. Quality presented papers will be published by Taylor & Francis as a proceedings book entitled "Applied Mathematics, Automation, and Computing" with a minimum publication charge.<br>
-3. The proceedings book will be submitted for indexing in Scopus.<br>
-4. Selected papers will also be published with Scopus-indexed book chapters with additional cost.
+                Accommodation will be provided for the
+                participants  on request,  at a nominal  cost in
+                the college campus.
             </div>
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbar-toggler");
+    const navMenu = document.querySelector(".navbar-nav");
+
+    toggler.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+});
+        </script>
     </body>
 </html>

@@ -1,8 +1,9 @@
 body{
     margin: 0px;
+    overflow-x: hidden;
 }
 
-.navbar{
+.navbar1{
     margin: 0px;
     padding: 2vh;
     color: #FFF;
@@ -17,6 +18,12 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.navigator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .head{
@@ -67,41 +74,90 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* width: 300px; */
     text-align: center;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .organizehead{
     display: flex;
-    margin: 20px;
-    font-weight: 600;
+    /* margin: 20px; */
+    /* font-weight: 600;
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
-    align-self: center;
+    align-self: center; */
 }
 
 .date{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     background-image: url('../Components/maths.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 95vw;
-    height: 700px;
+    width: 98vw;
+    height: 100vh;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 5vh;
+    border-radius: 50px;
+    /* filter: grayscale(50%); */
+}
+
+.dates{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-image: url('../Components/maths.png'); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    width: 98vw;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* margin-bottom: 5vh; */
+    /* border-radius: 50px; */
+}
+
+.dhmsdates{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 98vw;
+}
+
+.dhms{
+    display: flex;
+    background-color: #FFF;
+    box-shadow: 0px 0px 30px rgb(51, 9, 204);
+    font-size: 60px;
+    /* color: #0F0; */
+    font-weight: 500;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation: color 5s linear infinite;
+}
+
+.datetext{
+    color: #FFF;
 }
 
 .registerdate{
     padding: 4vh;
     margin:1vh;
-    font-size: 30px;
+    font-size: 25px;
     color: #FFF;
+    /* font-weight: 600; */
     border-radius: 20px;
     /* filter: blur(50px); */
     backdrop-filter: blur(50px);
+    box-shadow: 0px 0px 10px black;
+    min-height: 350px;
 }
 
 .registerdate:hover{
@@ -109,7 +165,7 @@ body{
 }
 
 .datehead{
-    font-size: 120%;
+    font-size: 100%;
     font-weight: 600;
     margin:1vh;
     color: rgb(0, 255, 98);
@@ -330,10 +386,62 @@ th{
     margin: 10px;
 }
 
+.navbartitle{
+    display: flex;
+    background-color: rgb(219, 247, 219);
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 102, 0);
+    font-weight: 600;
+}
+
+.navbartext{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 1vh;
+    padding-left: 1vh;
+}
+
+.buttont{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.button{
+    display: flex;
+    border-radius: 20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 0px 10px grey;
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    margin: 20px;
+    font-size: large;
+    background-image: linear-gradient(to right,#FFF, rgb(0, 225, 255));
+    font-weight: 600;
+    margin-left: 5vh;
+}
+
+.button:hover{
+    box-shadow: 0px 0px 20px grey;
+    cursor: pointer;
+}
+
 @media(max-width:678px)
 {
-    .navbar{
+    .navbar1{
         display: none;
+    }
+    .navbartitle{
+        display: none;
+    }
+    .navigator{
+        flex-direction: column-reverse;
+        align-items: normal;
     }
     .logo{
         border-radius:100px;
@@ -349,7 +457,24 @@ th{
     }
     .date{
         flex-direction: column;
-        height: 900px;
+        height: auto;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .registerdate{
+        font-size: 25px;
+        min-height: fit-content;
+    }
+    .dates{
+        flex-direction: column;
+    }
+    .dhms{
+        height: 90px;
+        width: 90px;
+        font-size: 150%;
+    }
+    .dhmsdates{
+        margin: 30px;
     }
     .about{
         padding:1vh;
@@ -377,6 +502,12 @@ th{
         text-align: center;
         animation: start 2s;
     }
+    .buttont{
+        flex-direction: column;
+    }
+    .button{
+        width: 70vw;
+    }
     .deligates{
         border: none;
     }
@@ -391,5 +522,17 @@ th{
     }
     to{
         opacity: 100%;
+    }
+}
+
+@keyframes color{
+    0%{
+        color: #00F;
+    }
+    50%{
+        color: #0F0;
+    }
+    100%{
+        color: #F00;
     }
 }

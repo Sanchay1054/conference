@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>About</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./Styles/navbar.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="./Styles/about.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
+        <div class="navigator">
+        <nav class="navbar">
+            <div class="navhead">ICAMAC25</div>
+            <button class="navbar-toggler">
+                Menu
+            </button>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
+                </li>
+                <li class="nav-item">
+                    <a href="importantdates.html" class="nav-link"><i class="bi bi-calendar2-event-fill"></i> Important Dates</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="nav-link dropdown-toggle"><i class="bi bi-send-fill"></i> Registration</div>
+                    <ul class="dropdown-menu">
+                        <li><a href="" class="dropdown-item"><i class="bi bi-backpack-fill"></i> Travel</a></li>
+                        <li><a href="register.html" class="dropdown-item"><i class="bi bi-send-fill"></i> Registration</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="invitedspeakers.html" class="nav-link"><i class="bi bi-megaphone-fill"></i> Keynote Speakers</a></li>
+                </li>
+                <li class="nav-item">
+                        <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contactus.html" class="nav-link"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+        <div class="about" id="about">
+        <div class="submissionhead">About</div>
+        <div class="fade-in-section abouttext">Welcome to the International Conference on Applied Mathematics, Automation, 
+            and Computing (ICAMAC). This prestigious event serves as a global platform for 
+            researchers, academics, and industry professionals to share their innovative ideas and 
+            breakthroughs in the fields of applied mathematics, automation, and computing. ICAMAC 
+            aims to foster collaboration, spark insightful discussions, and advance knowledge across 
+            these dynamic disciplines. Join us for a series of inspiring keynote speeches, technical 
+            sessions, and networking opportunities that will connect you with thought leaders and 
+            experts from around the world. 
+            ICAMAC 2025 promises an exhilarating program designed to expand the frontiers 
+            of applied mathematics and computer science. The sessions are crafted to inspire 
+            intellectual growth and promote interdisciplinary collaborations, which are vital for driving 
+            innovation across diverse scientific fields. 
+            Moreover, the conference provides an exceptional platform for young researchers 
+            to connect with top decision-makers and experts in mathematics and applied computing. 
+            This blend of diverse perspectives is crucial for tackling the real-world challenges these 
+            disciplines encounter today. 
+            Join us at ICAMAC 2025 as we shape the future of these vital fields. Experience 
+            an exhilarating journey in the breathtaking city of Erode, where tradition and innovation 
+            converge to create a stimulating environment for intellectual exchange. Mark your 
+            calendars and get ready to contribute to and benefit from this esteemed international event.</div>
+        </div>
+        
+
+        <div class="about1">
+            <button class="abouthead" data-toggle="collapse" data-target="#aboutcollege"> ↓ About the college</button>
+            <div class="collapse abouttext1" id="aboutcollege">
+                Kongu Engineering College, a leading research oriented
+institution with excellent facilities, run by Kongu Vellalar
+Institute of Technology Trust [KVITT] was established in the  
+year 1984.The Programmes of the institute are accredited by
+NBA and the institute is accredited by NAAC for 5 years with
+the grade of A++.The Institution has completely enclosed  
+with great natural beauty. It consists of 167 acres of land
+richly endowed with beautiful Greenland. It is an
+autonomous institution affiliated to Anna University, Chennai.
+The college has completed 40 years of dedicated and
+excellent service to the people of India and abroad in the
+field of Technical Education.The institution offers 17 UG, 7 PG and 21 PhD
+Programmes. It is one of the best self
+financing engineering colleges imparting high quality
+technical education in Tamil Nadu, India, and is well-known
+for its technical excellence, modern facilities, record of
+performance with excellent results and enterprising students.
+In the NIRF 2024 rankings, the college has been placed in
+the 101-50 band in the Engineering category among private
+engineering colleges.
+<a href="https://www.kongu.ac.in" target="_blank">View Our Website</a>
+            </div>
+        </div>
+        <div class="about1">
+            <button class="abouthead" data-toggle="collapse" data-target="#aboutdept"> ↓ About the department</button>
+            <div class="collapse abouttext1" id="aboutdept">
+                The Mathematics Department occupies a prominent
+                place in the annals of the academic history of the
+                college since its inception in the year 1984. The
+                department offers Ph.D degree programme and
+                produces efficient research scholars.The department
+                has 23 experienced faculty members including 19
+                doctorates with different specializations in
+                Mathematics and its applications. A good number of
+                research papers are published by the faculty in
+                National/International Journals . 
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbar-toggler");
+    const navMenu = document.querySelector(".navbar-nav");
+
+    toggler.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+});
+
+
+            const sections = document.querySelectorAll('.fade-in-section');
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the visible class and stop observing
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Unobserve to ensure it only triggers once
+      }
+    });
+  },
+  { threshold: 0.2 } // Trigger when 10% of the element is visible
+);
+
+sections.forEach(section => observer.observe(section));
+        </script>
+    </body>
+</html>

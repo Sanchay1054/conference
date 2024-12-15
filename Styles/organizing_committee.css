@@ -1,0 +1,277 @@
+body{
+    margin: 0px;
+    background-color: #EEE;
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.committee{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(6, 185, 6);
+}
+
+.organizeprofile{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 500px;
+    box-shadow: 0px 5px 5px;
+}
+
+
+
+.organize{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    font-size: large;
+    margin: 10px;
+    /* background-image: url('../Components/organizing.png');
+    background-repeat: no-repeat;
+    background-size: contain; */
+}
+
+.organizeimg{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 500px;
+    animation: animate 5s infinite linear;
+}
+
+.organizetext{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* width: 300px; */
+    text-align: center;
+    font-size: larger;
+    /* margin: 10px; */
+}
+
+.organizehead{
+    display: flex;
+    margin: 5px;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-self: center;
+}
+
+.submissionhead{
+    margin-top: 10px;
+    padding: 2vh;
+    background-color: rgb(17, 139, 17);
+    border-radius: 10px;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 150%;
+}
+
+.submissiontext{
+    padding: 2vh;
+    font-size: 30px;
+    /* padding: 5vh; */
+    /* text-align: center; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submissiont{
+    display: flex;
+    width: 40vw;
+    margin: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    /* background-color: #EEE; */
+    box-shadow: 0px 5px 5px black;
+    /* animation: animateborder 5s infinite linear; */
+}
+
+.committeecontainer{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../Components/committee.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chiefpatron{
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    width: 30vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.chief{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.centretext{
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(7, 105, 7);
+    margin: 10px;
+    width:fit-content;
+    align-self: center;
+}
+
+.chairpersonandconveners{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 70vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.chair{
+    display: flex;
+    /* flex-direction: column; */
+    width: 70vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.chairprofile{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px;
+}
+
+.person{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #FFF;
+    /* border-radius: 20px; */
+    box-shadow: 0px 0px 10px grey;
+    margin: 10px;
+    align-items: center;
+}
+
+.lastperson{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #FFF;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+    align-items: center;
+}
+
+.startperson{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #FFF;
+    border-top-left-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+    align-items: center;
+}
+
+@media(max-width:900px)
+{
+    .committeecontainer{
+        flex-direction: column;
+        height: 1500px;
+        align-items: center;
+    }
+}
+
+@media(max-width:678px)
+{
+    .organize{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .organizehead{
+        margin: 0px;
+    }
+    .organizetext{
+        margin: 0px;
+        margin-bottom: 30px;
+    }
+    .submissiont{
+        width:95vw;
+    }
+    .committeecontainer{
+        flex-direction: column;
+        height: 2400px;
+        align-items: center;
+    }
+    .chair{
+        flex-direction: column;
+    }
+    .chiefpatron{
+        height: 800px;
+    }
+    .person{
+        width: 75vw;
+        border-radius: 20px;
+    }
+    .startperson{
+        width: 75vw;
+        border-radius: 20px;
+    }
+    .lastperson{
+        width: 75vw;
+        border-radius: 20px;
+    }
+}
+
+
+
+@keyframes animate{
+    0%{
+        box-shadow: 0px 0px 10px #00F;
+    }
+    50%{
+        box-shadow: 0px 0px 50px #03F;
+    }
+    100%{
+        box-shadow: 0px 0px 10px #00F;
+    }
+}
+
+@keyframes animateborder{
+    0%{
+        /* border: 2px solid #F00; */
+        box-shadow: 0px 0px 10px #F00;
+    }
+    50%{
+        /* border: 2px solid #0F0; */
+        box-shadow: 0px 0px 10px #0F0;
+    }
+    100%{
+        /* border: 2px solid #00F; */
+        box-shadow: 0px 0px 10px #00F;
+    }
+}

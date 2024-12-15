@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>
+            Invited Speakers
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="./Styles/navbar.css">
+        <link rel="stylesheet" href="./Styles/advisoryandconferencedeligates.css">
+        <link rel="stylesheet" href="./Styles/invitedspeakers.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
+        <div class="navigator">
+            <nav class="navbar">
+                <div class="navhead">ICAMAC25</div>
+                <button class="navbar-toggler">
+                    Menu
+                </button>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="importantdates.html" class="nav-link"><i class="bi bi-calendar2-event-fill"></i> Important Dates</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle"><i class="bi bi-send-fill"></i> Registration</div>
+                        <ul class="dropdown-menu">
+                            <li><a href="travel.html" class="dropdown-item"><i class="bi bi-backpack-fill"></i> Travel</a></li>
+                            <li><a href="register.html" class="dropdown-item"><i class="bi bi-send-fill"></i> Registration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invitedspeakers.html" class="nav-link"><i class="bi bi-megaphone-fill"></i> Keynote Speakers</a></li>
+                    </li>
+                    <li class="nav-item">
+                            <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contactus.html" class="nav-link"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="submissionhead">Invited Speakers will be announced soon...</div>
+            <div class="deligates deligatesbackground"><div class="deligateshead">CONFERENCE DELIGATES</div>
+                <div class="deligatest">
+                    <div class="deligatestext">
+                        <img src="./Components/Screenshot 2024-12-07 115351.png" class="fade-in-grow deligatesimg"/>
+                        Dr. Mohana Sundaram Muthuvalu
+                        , Professor Department of
+                        Fundamental & Applied Sciences
+                        Universiti Teknologi Petronas
+                        Malaysia</div>
+                        <div class="deligatestext">
+                            <img src="./Components/Screenshot 2024-12-07 115358.png" class="fade-in-grow deligatesimg"/>
+                        Natesan Srinivasan , Professor
+                        Department of Mathematics Indian
+                        Institute of Technology Guwahati
+                        Guwahati, Assam, India - 781039</div>
+                        <div class="deligatestext">
+                        <img src="./Components/Screenshot 2024-12-10 105704.png" class="fade-in-grow deligatesimg"/>
+                        Dr. K. Kaliraj is Assistant professor
+                        in the Department of Ramanujan
+                        Institute for Advanced Study in
+                        Mathematics, University of Madras</div>
+                        <div class="deligatestext">
+                            <img src="./Components/Screenshot 2024-12-10 105723.png" class="fade-in-grow deligatesimg"/>
+                            Dr.R.Balasubramanian ,
+                            Professor and Head Department
+                            of Computer Science and
+                            Engineering, Indian Institute of
+                            Technology, Roorkee, Roorkee 
+                            Haridwar Highway, Roorkee,
+                            Uttarakhand 247667</div>
+                        <div class="deligatestext"> 
+                            <img src="./Components/Screenshot 2024-12-10 145938.png" class="fade-in-grow deligatesimg"/>
+                            Dr. Md. Golam Hafez , Professor
+                            Department of Mathematics
+                            Chittagong University of
+                            Engineering & Technology
+                            Chattogram - 4349 Bangladesh</div>
+                        </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+const toggler = document.querySelector(".navbar-toggler");
+const navMenu = document.querySelector(".navbar-nav");
+
+toggler.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+});
+});
+
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".fade-in-grow");
+
+  const handleScroll = () => {
+    images.forEach((image) => {
+      const rect = image.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (isVisible) {
+        image.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Run on page load in case images are already in view
+});
+
+    </script>
+    </body>
+</html>

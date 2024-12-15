@@ -1,0 +1,155 @@
+body{
+    overflow-x: hidden;
+}
+
+.venue{
+    display: flex;
+    width: 99vw;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url('../Components/kec.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding: 10px;
+}
+
+.venuet{
+    margin: 10px;
+    font-size: 25px;
+    min-width: 30vw;
+    width: 35vw;
+    border-radius: 20px;
+    backdrop-filter: brightness(0.2);
+    color: #FFF;
+    padding: 20px;
+}
+
+.submissionhead{
+    margin: 10px;
+    padding: 2vh;
+    background-color: rgb(17, 139, 17);
+    border-radius: 10px;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 150%;
+}
+
+.travel{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px grey;
+    margin:20px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: larger;
+}
+
+.airimg{
+    display: flex;
+    background-image: url('../Components/airplane.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.trainimg{
+    display: flex;
+    background-image: url('../Components/train.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.roadimg{
+    display: flex;
+    background-image: url('../Components/bus.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.air{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px grey;
+    margin:20px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: larger;
+    backdrop-filter: brightness(0.3);
+    color: #FFF;
+}
+
+.train{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px grey;
+    margin:20px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: larger;
+    backdrop-filter: brightness(0.3);
+    color: #FFF;
+}
+
+.road{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px grey;
+    margin:20px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: larger;
+    backdrop-filter: brightness(0.3);
+    color: #FFF;
+}
+
+@media(max-width: 678px){
+    .venue{
+        flex-direction: column;
+        height: auto;
+    }
+    .venuet{
+        width: 80vw;
+    }
+    .travel{
+        width: auto;
+    }
+    .airimg{
+        background-position-x: center;
+    }
+    .trainimg{
+        background-position-x: center;
+    }
+    .roadimg{
+        background-position-x: center;
+    }
+    .air{
+        width: auto;
+    }
+    .train{
+        width: auto;
+    }
+    .road{
+        width: auto;
+    }
+}

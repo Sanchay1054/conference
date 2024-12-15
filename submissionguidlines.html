@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Submission Guidelines</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="./Styles/navbar.css">
+        <link rel="stylesheet" href="./Styles/advisoryandconferencedeligates.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
+        <div class="navigator">
+            <nav class="navbar">
+                <div class="navhead">ICAMAC25</div>
+                <button class="navbar-toggler">
+                    Menu
+                </button>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="organizingcommittee.html" class="nav-link"> Organizing Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="importantdates.html" class="nav-link">Important Dates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link">Registration</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle">Session</div>
+                        <ul class="dropdown-menu">
+                            <li><a href="invitedspeakers.html" class="dropdown-item">Invited Speakers</a></li>
+                            <li><a href="sessions.html" class="dropdown-item">Session Schedule</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="conferencethemes.html" class="nav-link"> Conference Themes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="submissionguidlines.html" class="nav-link"> Article Submission Guidelines </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contactus.html" class="nav-link"> Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+            <div class="container">
+            <div class="submissionhead">Submission Guidelines</div>
+        <div class="fade-in-section submissiontext">
+            Faculty members/research scholars/scientists from
+            India and abroad are invited to submit original and
+            unpublished research articles on the topics related
+            to the conference. Research papers should present
+            novel perspectives within the general scope of the
+            conference. The abstract and manuscript must
+            adhere to the conference template format. The papers received
+            will be peer reviewed and the accepted quality
+            papers will be published by Taylor & Francis as a
+            Proceedings book (Scopus Indexed) entitled
+            <b>“Applied Mathematics, Automation and Computing”</b>
+            with a minimum publication charge/Scopus
+            Indexed Book Chapter with an additional  
+           publication charge / a Journal indexed in Google
+            Scholar with an amount of Rupees 2000 .
+
+        </div>
+            <div class="submissionhead">Template <i class="bi bi-newspaper"></i></div>
+            <div class="fade-in-section submissiontext">Templates will be uploaded soon...</div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbar-toggler");
+    const navMenu = document.querySelector(".navbar-nav");
+
+    toggler.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+});
+
+const sections = document.querySelectorAll('.fade-in-section');
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the visible class and stop observing
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Unobserve to ensure it only triggers once
+      }
+    });
+  },
+  { threshold: 0.2 } // Trigger when 10% of the element is visible
+);
+
+sections.forEach(section => observer.observe(section));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+.deligatesbackground{
+    background-image: url('../Components/conference1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(max-width: 678px)
+{
+    .deligatesbackground{
+        background-position-x: right;
+    }
+}

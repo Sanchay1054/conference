@@ -1,0 +1,50 @@
+<b class="container organizehead">CONFERENCE THEMES</b>
+            <div class="theme">
+                <div class="themetext"><b class="themehead">Applied Mathematics</b> <div class="themet">Differential Equations, Numerical Analysis,
+                    Optimization<br><br>
+                    Probability, Statistics, Dynamical Systems,
+                    Fluid Dynamics </div></div>
+                <div class="themetext"><b class="themehead">Mathematical Modeling</b><div class="themet">Computational Sciences, Fuzzy Logic, Neural
+                    Networks<br><br>
+                    Graph Theory, Complex Networks,
+                    Uncertainty Theory<br><br>
+                    Complex Systems, Intelligent Computing
+                    Applications</div></div>
+                <div class="themetext"><b class="themehead">Computational Science</b><div class="themet">Algorithms, High-Performance Computing, AI<br><br>
+                    Quantum Computing, IoT, Big Data, Cloud
+                    Computing<br><br>
+                    Cryptography, Communication & Data
+                    Security</div></div>
+                <div class="themetext"><b class="themehead">Electrical Engineering</b><div class="themet">Power Systems, Smart Grids, Renewable
+                    Energy<br><br>
+                    Robotics, UAVs, Autonomous Vehicles, HVDC<br><br>
+                    Embedded Control, Fuel Cells, Battery
+                    Technology</div></div>
+                <div class="themetext"><b class="themehead">Electronics Engineering</b><div class="themet">Signal Processing, Biomedical Systems, MEMS<br><br>
+                    Wireless Communications, 5G/6G, IoT
+                    Sensors<br><br>
+                    VLSI Design, Advanced Drones, 3D Printing</div></div>
+            </div>
+            <div class="container">
+
+                
+                <div class="submissionhead"> SUBMISSION GUIDELINES & INDEXING</div>
+                <div class="submissiontext"> Faculty members/research
+                    scholars/scientists from India and abroad are
+                    invited to submit original unpublished
+                    research on the topics related to the
+                    conference. Research papers should present
+                    novel perspectives within the general scope
+                    of the conference. The manuscript must
+                    adhere to the conference template format.
+                    The conference paper template is available
+                    on the conference website
+                    (https://smet.org.in). The papers received will
+                    be peerreviewed before being accepted for
+                    presentation.All the accepted papers will be
+                    published in UGC- CARE / Scopus journals
+                    depending upon quality norms and subject
+                    to applicable publication charges of the
+                    journalto be borne by the author(s)*</div>
+                
+                </div>
