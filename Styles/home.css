@@ -460,6 +460,7 @@ th{
         height: auto;
         width: 100vw;
         overflow-x: hidden;
+        padding-top: 20px;
     }
     .registerdate{
         font-size: 25px;

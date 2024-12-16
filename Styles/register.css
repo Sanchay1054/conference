@@ -1,5 +1,10 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0px;
+    overflow-x: hidden;
 }
 
 .navbar1{
@@ -104,9 +109,77 @@ th{
     text-align: center;
 }
 
+.register{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.registertext{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 99vw;
+}
+
+.registert{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+    padding: 20px;
+    background-image: url('../Components/register.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.registerdetail{
+    margin-bottom: 10px;
+}
+
+.registerheading{
+    font-weight: 600;
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+.salutation{
+    padding-right: 20px;
+}
+
+.button1{
+    display: flex;
+    border-radius: 20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 0px 10px grey;
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    margin: 20px;
+    font-size: large;
+    background-image: linear-gradient(to right,#FFF, rgb(0, 225, 255));
+    font-weight: 600;
+    margin-left: 5vh;
+}
+
 @media(max-width:678px)
 {
     .registerhead{
         flex-direction: column;
+    }
+    .registertext{
+        flex-direction: column;
+    }
+    .salutation{
+        padding-right: 10px;
     }
 }

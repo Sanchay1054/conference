@@ -56,6 +56,7 @@
                     fees successfully. Furthermore, for each paper/poster, at least one author can attend and 
                     pay the registration fee. In addition, the delegates can choose various options to 
                     participate in the conference.</div>
+                <a href="travel.html" class="button1">Travel Details <i class="bi bi-arrow-bar-right"></i></a>
             </div>
         <div class="registerhead">
             <div>
@@ -149,41 +150,68 @@
         </div>
         <div class="container">
             <b class="head">REGISTER</b>
-            <form class="form" method="POST" action="https://conference-backend-2.onrender.com/api/register" id="myForm">
-                <div class="formt">
-                    Faculty / Research Scholar / Student
+        </div>
+        <form class="register" method="POST" action="https://conference-backend-2.onrender.com/api/register">
+            <div class="registertext">
+                <div class="fade-in-section registert">
+                    <b class="registerheading">Personal Details</b>
+                    <div style="display: flex;" class="registerdetail">
+                        <div class="salutation"><input type="checkbox" name="salutation" value="Dr."> Dr</div>
+                        <div class="salutation"><input type="checkbox" name="salutation" value="Prof."> Prof.</div>
+                        <div class="salutation"><input type="checkbox" name="salutation" value="Mr."> Mr.</div>
+                        <div class="salutation"><input type="checkbox" name="salutation" value="Mrs."> Mrs.</div>
+                        <div class="salutation"><input type="checkbox" name="salutation" value="Ms."> Ms.</div>
+                    </div>
+                    <div class="registerdetail">
+                        First Name<br>
+                        <input type="text" name="firstname" required>
+                    </div>
+                    <div class="registerdetail">
+                        Last Name<br>
+                        <input type="text" name="lastname">
+                    </div>
+                </div>
+                <div class="fade-in-section registert">
+                    <b class="registerheading">Contact Details</b>
+                    <div class="registerdetail">
+                        Phone Number (WhatsApp)<br>
+                        <input type="text" name="phonenumber" required>
+                    </div>
+                    <div class="registerdetail">
+                        Email<br>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="registerdetail">
+                        Address<br>
+                        <textarea type="text" row="10" cols="30" name="address" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="registertext">
+                <div class="fade-in-section registert">
+                    <b class="registerheading">Academic Details</b>
+                    <div class="registerdetail">
+                        Institution<br>
+                        <input type="text" name="institution" required>
+                    </div>
+                    <div class="registerdetail">
+                        Department<br>
+                        <input type="text" name="department" required>
+                    </div>
+                    <div class="registerdetail" style="justify-content: center;">
+                        Faculty / Research Scholar / Student<br>
                     <select name="category" required>
                         <option value="Faculty" selected>Faculty</option>
                         <option value="Research Scholar">Research Scholar</option>
                         <option value="Student">Student</option>
                     </select>
-                </div>
-                <div class="formt">
-                    Name
-                    <input type="text" name="name" placeholder="Enter your name" required />
-                </div>
-                <div class="formt">
-                    Phone Number (WhatsApp)
-                    <input type="text" name="phone" placeholder="Enter your WhatsApp number" maxlength="10" required />
-                </div>
-                <div class="formt">
-                    Email
-                    <input type="email" name="email" placeholder="Enter your email" required />
-                </div>
-                <div class="formt">
-                    College
-                    <input type="text" name="college" placeholder="Enter college name" required />
-                </div>
-                <div class="formt">
-                    Department
-                    <input type="text" name="department" placeholder="Enter your department" required />
-                </div>
-                <div class="formt">
-                    (If Faculty / Research Scholar) Designation
+                    </div>
+                    <div class="registerdetail">
+                        (If Faculty / Research Scholar) <br>Designation<br>
                     <input type="text" name="designation" placeholder="Enter your designation"  />
-                </div>
-                <div class="formt">
-                    (If Student) Student Year
+                    </div>
+                    <div class="registerdetail">
+                        (If Student) Student Year<br>
                     <select name="student_year">
                         <option value="1st Year" selected>I am a Faculty / Research Scholar</option>
                         <option value="1st Year" >1st Year</option>
@@ -191,56 +219,93 @@
                         <option value="3rd Year">3rd Year</option>
                         <option value="4th Year">4th Year</option>
                     </select>
+                    </div>
                 </div>
-                <div class="formt">
-                    Listener or Participant
-                    <select name="role" required>
-                        <option value="Listener" selected>Listener</option>
-                        <option value="Participant">Participant</option>
-                    </select>
+            
+                <div class="fade-in-section registert">
+                    <b class="registerheading">Participation Details</b>
+                    <div class="registerdetail">
+                        Proof for payment<br>(Drive Link, Leave blank if not paid)<br>
+                        <input type="text" name="payment">
+                    </div>
+                <div class="registerdetail">
+                    Listener/presenter<br>
+                    <select name="presenter" required><option value="Listener">Listerner</option><option value="Presenter">Presenter</option></select>
                 </div>
-                <div class="formt">
-                    Amount Paid or Not<br>(Please enter the drive link of the screenshot)<br><b>Leave Blank if not paid</b>
-                    <input type="text" name="payment_screenshot" placeholder="Drive Link"/>
-                </div>
-                <div class="formt">
-                    Mode: Online or Offline
+                <div class="registerdetail">
+                    Mode: Online or Offline<br>
                     <select name="mode" required>
                         <option value="Online" selected>Online</option>
                         <option value="Offline">Offline</option>
                     </select>
                 </div>
-                <div class="formt">
-                    Accomodation for
+                <div class="registerdetail">
+                    Accomodation for<br>
                     <div>
-                        <input type="radio" name="accomodation" value="0 days" checked required />0 days
-                        <input type="radio" name="accomodation" value="1 days"  />1 days
+                        <input type="radio" name="accomodation" value="Not Required" checked required />0 day
+                        <input type="radio" name="accomodation" value="1 day"  />1 day
                         <input type="radio" name="accomodation" value="2 days"  />2 days
                         <input type="radio" name="accomodation" value="3 days"  />3 days
                     </div>
                 </div>
-                <div style="margin: 10px;">
-                    <input type="checkbox" required> I have read and agree with all the above remarks
+                <div class="registerdetail">
+                    <input type="checkbox" name="ack" required> I have read and agree with all the <a href="#notice">remarks</a>
                 </div>
-                <button type="submit" class="button">Submit</button>
-            </form>
-
-            <div class="head">NOTICE</div>
+                </div>
+            </div>
+            <div class="form container">
+                <button class="button" type="submit">submit</button>
+                <div id="submit">This may take few minutes (Please wait, don't submit many times, Thank you)</div>
+            </div>
+        </form>
+        <div class="container">
+            <div class="head" id="notice">NOTICE</div>
             <div class="text">
                 Accommodation will be provided for the
-                participants  on request,  at a nominal  cost in
-                the college campus.
+                participants  on request, at a nominal  cost in
+                the college campus.<br>
+                <a href="conferencethemes.html#submission">View Submission Details <i class="bi bi-arrow-bar-right"></i></a><br>
+                <a href="conferencethemes.html#theme">Conference Themes <i class="bi bi-arrow-bar-right"></i></a><br>
+                <a href="conferencethemes.html#template">Template <i class="bi bi-arrow-bar-right"></i></a>
             </div>
         </div>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-    const toggler = document.querySelector(".navbar-toggler");
-    const navMenu = document.querySelector(".navbar-nav");
 
-    toggler.addEventListener("click", function () {
-        navMenu.classList.toggle("active");
-    });
-});
-        </script>
-    </body>
+            async function fetchurl(){
+                try{
+                const data = await fetch("https://conference-backend-2.onrender.com/feedbacks");
+                document.getElementById("submit").innerHTML = "";
+                }
+                catch{
+
+                };
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggler = document.querySelector(".navbar-toggler");
+                const navMenu = document.querySelector(".navbar-nav");
+                
+                toggler.addEventListener("click", function () {
+                    navMenu.classList.toggle("active");
+                });
+            });
+            
+const sections = document.querySelectorAll('.fade-in-section');
+
+const observer = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the visible class and stop observing
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Unobserve to ensure it only triggers once
+            }
+        });
+    },
+    { threshold: 0.2 } // Trigger when 10% of the element is visible
+);
+
+sections.forEach(section => observer.observe(section));
+fetchurl();
+</script>
+</body>
 </html>

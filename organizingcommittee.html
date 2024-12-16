@@ -229,7 +229,7 @@
     </div>
     </div>
     <div class="organize" style="background-color: #fdfaf6;">
-        <div>
+        <div class="fade-in-section">
         <div class="organizehead">Organized by</div>
         <div class="organizetext">
         Department of Mathematics<br>
@@ -240,13 +240,17 @@
     </div>
     </div>
 
-    <div class="organizetext">
+    <div class="fade-in-section organizetext">
     In Association with<br>
     <b>TamilNadu State Council for Science and
         Technology
        </b><br>
        <img src="./Components/tnscst.png" width="200px" height="200px">
     </div>
+    <div class="fade-in-section organizetext">
+        <img src="./Components/taylor&francis.png" width="200px" height="200px"><br>
+    Taylor & Francis Group
+</div>
     </div><div class="container">
         <div class="submissionhead"> ADVISORY COMMITTEE</div>
     </div>
@@ -307,7 +311,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 } // Trigger when 10% of the element is visible
+  { threshold: 0.3 } // Trigger when 10% of the element is visible
 );
 
 sections.forEach(section => observer.observe(section));

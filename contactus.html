@@ -82,7 +82,7 @@
         </div>
         
         <div class="container">
-            <form class="fade-in-section feedback" method="post" action="http://localhost:3000/feedback">
+            <form class="fade-in-section feedback" method="post" action="https://conference-backend-2.onrender.com/feedback">
                 <div class="submissionhead">Feedback</div>
                 <div>
                     Name <i class="bi bi-person-fill"></i><br>
@@ -156,6 +156,16 @@
         </div>
 
         <script>
+            async function fetchurl(){
+                try{
+                const data = await fetch("https://conference-backend-2.onrender.com/feedbacks");
+                document.getElementById("submit").innerHTML = "";
+                }
+                catch{
+
+                };
+            }
+
             document.addEventListener("DOMContentLoaded", function () {
     const toggler = document.querySelector(".navbar-toggler");
     const navMenu = document.querySelector(".navbar-nav");
@@ -182,6 +192,7 @@ const observer = new IntersectionObserver(
 
 sections.forEach(section => observer.observe(section));
 
+        fetchurl();
         </script>
     </body>
 </html>

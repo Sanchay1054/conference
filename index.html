@@ -220,6 +220,17 @@ financing engineering colleges imparting high quality
             </div>
 
             <script>
+
+async function fetchurl(){
+                try{
+                const data = await fetch("https://conference-backend-2.onrender.com/feedbacks");
+                document.getElementById("submit").innerHTML = "";
+                }
+                catch{
+
+                };
+            }
+
                 document.addEventListener("DOMContentLoaded", function () {
     const toggler = document.querySelector(".navbar-toggler");
     const navMenu = document.querySelector(".navbar-nav");
@@ -280,7 +291,7 @@ const observer = new IntersectionObserver(
 
 sections.forEach(section => observer.observe(section));
 
-
+            fetchurl();
             </script>
     </body>
 </html>

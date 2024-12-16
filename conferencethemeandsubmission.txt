@@ -48,3 +48,83 @@
                     journalto be borne by the author(s)*</div>
                 
                 </div>
+
+
+
+register
+
+<form class="form" method="POST" action="https://conference-backend-2.onrender.com/api/register" id="myForm">
+                <div class="formt">
+                    Faculty / Research Scholar / Student
+                    <select name="category" required>
+                        <option value="Faculty" selected>Faculty</option>
+                        <option value="Research Scholar">Research Scholar</option>
+                        <option value="Student">Student</option>
+                    </select>
+                </div>
+                <div class="formt">
+                    Name
+                    <input type="text" name="name" placeholder="Enter your name" required />
+                </div>
+                <div class="formt">
+                    Phone Number (WhatsApp)
+                    <input type="text" name="phone" placeholder="Enter your WhatsApp number" maxlength="10" required />
+                </div>
+                <div class="formt">
+                    Email
+                    <input type="email" name="email" placeholder="Enter your email" required />
+                </div>
+                <div class="formt">
+                    College
+                    <input type="text" name="college" placeholder="Enter college name" required />
+                </div>
+                <div class="formt">
+                    Department
+                    <input type="text" name="department" placeholder="Enter your department" required />
+                </div>
+                <div class="formt">
+                    (If Faculty / Research Scholar) Designation
+                    <input type="text" name="designation" placeholder="Enter your designation"  />
+                </div>
+                <div class="formt">
+                    (If Student) Student Year
+                    <select name="student_year">
+                        <option value="1st Year" selected>I am a Faculty / Research Scholar</option>
+                        <option value="1st Year" >1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                </div>
+                <div class="formt">
+                    Listener or Participant
+                    <select name="role" required>
+                        <option value="Listener" selected>Listener</option>
+                        <option value="Participant">Participant</option>
+                    </select>
+                </div>
+                <div class="formt">
+                    Amount Paid or Not<br>(Please enter the drive link of the screenshot)<br><b>Leave Blank if not paid</b>
+                    <input type="text" name="payment_screenshot" placeholder="Drive Link"/>
+                </div>
+                <div class="formt">
+                    Mode: Online or Offline
+                    <select name="mode" required>
+                        <option value="Online" selected>Online</option>
+                        <option value="Offline">Offline</option>
+                    </select>
+                </div>
+                <div class="formt">
+                    Accomodation for
+                    <div>
+                        <input type="radio" name="accomodation" value="0 days" checked required />0 days
+                        <input type="radio" name="accomodation" value="1 days"  />1 days
+                        <input type="radio" name="accomodation" value="2 days"  />2 days
+                        <input type="radio" name="accomodation" value="3 days"  />3 days
+                    </div>
+                </div>
+                <div style="margin: 10px;">
+                    <input type="checkbox" required> I have read and agree with all the above remarks
+                </div>
+                <button type="submit" class="button">Submit</button>
+            </form>
