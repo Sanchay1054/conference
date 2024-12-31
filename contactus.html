@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
+        <div id="page">
         <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
         <div class="navigator">
             <nav class="navbar">
@@ -154,7 +156,7 @@
                     </div>
             </div>
         </div>
-
+        </div>
         <script>
             async function fetchurl(){
                 try{
@@ -193,6 +195,12 @@ const observer = new IntersectionObserver(
 sections.forEach(section => observer.observe(section));
 
         fetchurl();
+        document.getElementById('page').style.display = 'none';
+            window.addEventListener('load', function () {
+            // Show the content once all images and resources are loaded
+            document.getElementById('page').style.display = 'block';
+            document.getElementById('load').style.display = 'none';
+            });
         </script>
     </body>
 </html>

@@ -16,6 +16,8 @@
         </style>
     </head>
     <body>
+        <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
+        <div id="page">
         <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
         <!-- <div class="navbartitle">
             <div class="navbartext">Home</div>
@@ -66,23 +68,33 @@
             </ul>
         </nav>
         
-        <div class="container head">
-            <div class="header">
-                <img src="./Components/logo.png" class="logo">
-                INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)
+    </div>
+    <div class="imagetextbg" id="home">
+        <div class="imageheader">
+            <div class="imaget">
+                <div class="fade-in-section imagetext">KEC</div>
+                <div class="fade-in-section imagestext">INTERNATIONAL CONFERENCE<br> ON APPLIED MATHEMATICS,<br> AUTOMATION AND COMPUTING (ICAMAC25)</div>
+            </div>
+            <div class="images">
+                <a class="fade-in-section side" href="importantdates.html"><div>Important Dates <i class="bi bi-calendar2-event-fill"></i></div> <i style="float:left;"class="bi bi-arrow-bar-right"></i></a>
+                <a class="fade-in-section side" href="conferencethemes.html#template"><div>Templates <i class="bi bi-file-earmark-spreadsheet-fill"></i></div> <i class="bi bi-arrow-bar-right"></i></a>
+                <a class="fade-in-section side" href="travel.html#Location"><div>Location  <i class="bi bi-geo-alt-fill"></i></div> <i class="bi bi-arrow-bar-right"></i></a>
+                <a class="fade-in-section side" href="register.html"><div>Register <i class="bi bi-send-fill"></i></div> <i class="bi bi-arrow-bar-right"></i></a>
             </div>
         </div>
     </div>
             <div class="organize">
-                <div>
-                <div class="fade-in-section organizetext">Organized by</div>
-                <div class="fade-in-section organizetext">
+                <div  class="fade-in-section organizetext">
+                <!-- <div style="display:flex;"> -->
+                    <img src="./Components/keclogo.png" width="100px" height="100px"><br>
+                <!-- <div class="fade-in-section organizetext">Organized by</div><br> -->
+                    <div>Organized by<br>
                 Department of Mathematics<br>
                 <b>Kongu Engineering College</b>
                 <br>(Autonomous)<br>
                 Perundurai-638060<br>
-                Erode <br> Tamilnadu.<br>
-            </div>
+                Erode, Tamilnadu.<br></div>
+            <!-- </div> -->
             </div>
 
             <div class="fade-in-section organizetext">
@@ -98,15 +110,15 @@
             </div>
             </div>
             <div class="container">
-            <div class="date">
+            <div class="date" id="date">
                 <div class="dates">
-                <div class="fade-in-section registerdate">
+                <div class="fade-in-grow registerdate">
                     <div class="datehead">Conference Dates:</div>
                     <div class='datetext'>21st & 22nd FEBRUARY, 2025</div>
                     <div class="datehead">HYBRID MODE</div>
                     <div class='datetext'>Both Online and Offline</div>
                 </div>
-                <div class=" fade-in-section registerdate">
+                <div class=" fade-in-grow registerdate">
                     <div class="datehead">DEADLINES</div>
                     <b>Abstract Submission:</b><br>
  <div class='datetext'>20th January, 2025</div>
@@ -117,7 +129,7 @@
  <br>
  <div class='datetext'>15th February, 2025</div>
                 </div>
-                <div class="fade-in-section registerdate">
+                <div class="fade-in-grow registerdate">
                     <div class="datehead">LOCATION</div>
                     <div class='datetext'>KONGU ENGINEERING COLLEGE<br>Perundurai - 638060<br>Tamil Nadu<br>India</div>
                 </div>
@@ -127,71 +139,27 @@
                     <div id="days" class="dhms"></div>
                     <div id="hours" class="dhms"></div>
                     <div id="minutes" class="dhms"></div>
-                    <div id="seconds" class="dhms"></div>
+                    <div id="seconds" class="dhmsani"></div>
                 </div>
+                <a class="registerbutton" href="./register.html">Register Here</a>
             </div>
-            <a class="registerbutton" href="./register.html">Register</a>
             </div>
             <div class="container">
-                <div class="submissionhead">Brochure</div>
+            <div class="organize1">
                 <div class="submissiontext">
+                    <div class="submissionhead">Brochure</div><br>
                     <a href="International Conference - KEC.pdf" target="_blank">View brochure <i class="bi bi-arrow-bar-right"></i></a><br>
                     <a href="International Conference - KEC.pdf" download="International Conference - KEC.pdf">Download the brochure <i class="bi bi-cloud-arrow-down-fill"></i></a>
                 </div>
-            </div>
-            <div class="buttont">
-            <div><a href="conferencethemes.html#template" class="fade-in-section button">Template  <i class="bi bi-arrow-bar-right"></i></a></div>
-            <div><a href="conferencethemes.html#theme" class="fade-in-section button">Conference Themes  <i class="bi bi-arrow-bar-right"></i></a></div>
-            <div><a href="travel.html#location" class="fade-in-section button">Location <i class="bi bi-arrow-bar-right"></i></a></div>
-            </div>
-            <div class="about">
-                <button class="abouthead" data-toggle="collapse" data-target="#about"> ↓ About the Conference</button>
-                <div class="collapse abouttext" id="about">
-                    The International Conference on Applied Mathematics, Automation and Computing gathers researchers, academicians and professionals in the fields of Applied Mathematics, Automation and Computational Science. The conference serves as a platform for presenting and discussing the latest research developments, methodologies and applications in these areas. The conference focuses on the mathematical aspects of computing and the symbiosis between Mathematics, Automation and computer science. It gives researchers an opportunity to deepen in the practical application of mathematical information on informatics. It brings together leading scientists, researchers, and practitioners from around the world, the conference offers a platform to present cutting-edge research, exchange ideas, and foster collaborations across disciplines. The Conference will take place with physical and virtual participation.
-                    <a href="about.html#about">View About</a>
-            </div>
-                </div>   
-            <div class="about">
-                <button class="abouthead" data-toggle="collapse" data-target="#aboutcollege"> ↓ About the Institution</button>
-                <div class="collapse abouttext" id="aboutcollege">
-                    Kongu Engineering College, a leading research oriented
- institution with excellent facilities, run by Kongu Vellalar
- Institute of Technology Trust [KVITT] was established in the  
-year 1984.The Programmes of the institute are accredited by
- NBA and the institute is accredited by NAAC for 5 years with
- the grade of A++.The Institution has completely enclosed  
-with great natural beauty. It consists of 167 acres of land
- richly endowed with beautiful Greenland. It is an
- autonomous institution affiliated to Anna University, Chennai.
- The college has completed 40 years of dedicated and
- excellent service to the people of India and abroad in the
- field of Technical Education.The institution offers 17 UG, 7 PG and 21 PhD
- Programmes. It is one of the best self
-financing engineering colleges imparting high quality
- technical education in Tamil Nadu, India, and is well-known
- for its technical excellence, modern facilities, record of
- performance with excellent results and enterprising students.
- In the NIRF 2024 rankings, the college has been placed in
- the 101-50 band in the Engineering category among private
- engineering colleges.
- <a href="https://www.kongu.ac.in" target="_blank">View Our Website</a>
+                <div class="buttont">
+                <div><a href="register.html#payment" class="fade-in-section button">payment Details  <i class="bi bi-arrow-bar-right"></i></a></div>
+                <div><a href="conferencethemes.html#theme" class="fade-in-section button">Conference Themes  <i class="bi bi-arrow-bar-right"></i></a></div>
+                <div><a href="conferencethemes.html#submission" class="fade-in-section button">Submission Details <i class="bi bi-arrow-bar-right"></i></a></div>
                 </div>
             </div>
-            <div class="about">
-                <button class="abouthead" data-toggle="collapse" data-target="#aboutdept"> ↓ About the Department</button>
-                <div class="collapse abouttext" id="aboutdept">
-                    The Mathematics Department occupies a prominent
-                    place in the annals of the academic history of the
-                    college since its inception in the year 1984. The
-                    department offers Ph.D degree programme and
-                    produces efficient research scholars.The department
-                    has 23 experienced faculty members including 19
-                    doctorates with different specializations in
-                    Mathematics and its applications. A good number of
-                    research papers are published by the faculty in
-                    National/International Journals . 
-                </div>
             </div>
+               
+            
             
             
                 
@@ -199,7 +167,7 @@ financing engineering colleges imparting high quality
                 <div class="footertext">
                     <b>View in Maps</b>
                     <div style="width: 100%"><iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Kongu%20Engineering%20College,%20Perundurai,%20Erode+(KONGU%20ENGINEERING%20COLLEGE)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
-                    <b>KONGU ENGINEERING COLLEGE</b></div>
+                    </div>
                 <div class="footertext">
                     <b>GET IN TOUCH</b>
                     <div class="footert">
@@ -218,7 +186,8 @@ financing engineering colleges imparting high quality
                         </div>
                 </div>
             </div>
-
+        </div>
+        <!-- <hello></hello> -->
             <script>
 
 async function fetchurl(){
@@ -292,6 +261,44 @@ const observer = new IntersectionObserver(
 sections.forEach(section => observer.observe(section));
 
             fetchurl();
+            document.getElementById('page').style.display = 'none';
+            window.addEventListener('load', function () {
+            // Show the content once all images and resources are loaded
+            document.getElementById('page').style.display = 'block';
+            document.getElementById('load').style.display = 'none';
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".fade-in-grow");
+//   const click = document.getElementById("click");
+
+  const handleScroll = () => {
+    images.forEach((image) => {
+      const rect = image.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (isVisible) {
+        image.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Run on page load in case images are already in view
+});
+// window.addEventListener('load', function () {
+//         const targetElement = document.getElementById('home');
+        
+//         // Scroll to the target element
+//         if(window.outerWidth>=678)
+//         {
+//         targetElement.scrollIntoView({
+//             behavior: 'smooth', // Smooth scrolling animation
+//             block: 'center'     // Align the element in the center of the viewport
+//         });
+//     }
+//     });
             </script>
     </body>
 </html>

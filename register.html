@@ -10,6 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
+        <div id="page">
         <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)</div>
         <div class="navigator">
             <nav class="navbar">
@@ -58,7 +60,7 @@
                     participate in the conference.</div>
                 <a href="travel.html" class="button1">Travel Details <i class="bi bi-arrow-bar-right"></i></a>
             </div>
-        <div class="registerhead">
+        <div class="registerhead" id="payment">
             <div>
                 <b>Bank Details: </b><br>
                 <table class="table table-bordered table-striped">
@@ -213,7 +215,7 @@
                     <div class="registerdetail">
                         (If Student) Student Year<br>
                     <select name="student_year">
-                        <option value="1st Year" selected>I am a Faculty / Research Scholar</option>
+                        <option value="I am a Faculty / Reasearch Scholar" selected>I am a Faculty / Research Scholar</option>
                         <option value="1st Year" >1st Year</option>
                         <option value="2nd Year">2nd Year</option>
                         <option value="3rd Year">3rd Year</option>
@@ -253,9 +255,11 @@
                 </div>
                 </div>
             </div>
-            <div class="form container">
-                <button class="button" type="submit">submit</button>
-                <div id="submit">This may take few minutes (Please wait, don't submit many times, Thank you)</div>
+                <div class="registertext">
+                <div class="form container">
+                    <button class="button" type="submit">submit</button>
+                    <div id="submit">This may take few minutes (Please wait, don't submit many times, Thank you)</div>
+                </div>
             </div>
         </form>
         <div class="container">
@@ -268,6 +272,7 @@
                 <a href="conferencethemes.html#theme">Conference Themes <i class="bi bi-arrow-bar-right"></i></a><br>
                 <a href="conferencethemes.html#template">Template <i class="bi bi-arrow-bar-right"></i></a>
             </div>
+        </div>
         </div>
         <script>
 
@@ -306,6 +311,12 @@ const observer = new IntersectionObserver(
 
 sections.forEach(section => observer.observe(section));
 fetchurl();
+document.getElementById('page').style.display = 'none';
+            window.addEventListener('load', function () {
+            // Show the content once all images and resources are loaded
+            document.getElementById('page').style.display = 'block';
+            document.getElementById('load').style.display = 'none';
+            });
 </script>
 </body>
 </html>

@@ -61,10 +61,11 @@ body{
     align-items: center;
     justify-content:space-evenly;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    /* border-top: 1px solid grey; */
+    /* border-bottom: 1px solid grey; */
     font-size: large;
-    margin: 10px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 .organizetext{
@@ -95,11 +96,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     width: 98vw;
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: 100vh;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 5vh;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     /* filter: grayscale(50%); */
 }
 
@@ -128,6 +130,21 @@ body{
 }
 
 .dhms{
+    display: flex;
+    background-color: #FFF;
+    box-shadow: 0px 0px 30px rgb(51, 9, 204);
+    font-size: 60px;
+    /* color: #0F0; */
+    font-weight: 500;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.dhmsani{
     display: flex;
     background-color: #FFF;
     box-shadow: 0px 0px 30px rgb(51, 9, 204);
@@ -178,11 +195,12 @@ body{
     padding-bottom: 1vh;
     font-size: 150%;
     border-radius: 10px;
-    background-color: #00F;
+    background-color: rgb(17, 139, 17);
     color: #FFF;
     font-weight: 600;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
 }
 
 .registerbutton:hover{
@@ -405,6 +423,7 @@ th{
 .buttont{
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
     margin: 20px;
 }
@@ -418,7 +437,7 @@ th{
     padding-right: 20px;
     box-shadow: 0px 0px 10px grey;
     font-family: Arial, Helvetica, sans-serif;
-    width: fit-content;
+    min-width: 250px;
     margin: 20px;
     font-size: large;
     background-image: linear-gradient(to right,#FFF, rgb(0, 225, 255));
@@ -429,6 +448,141 @@ th{
 .button:hover{
     box-shadow: 0px 0px 20px grey;
     cursor: pointer;
+}
+
+.imagetextbg{
+    background-image: url("../Components/kec.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagetext{
+    display: flex;
+    background-color: #2f8d46;
+    background-image: url("../Components/background.png");
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* margin-top: 200px; */
+      font-size: 20vw;
+      /* text-align: center; */
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Steelfish Rg', 'helvetica neue', 
+                      helvetica, arial, sans-serif;
+      font-weight: 1000;
+      -webkit-font-smoothing: antialiased;
+      background-size: contain;
+      transform: scaleY(1.2);
+  }
+
+  .imagestext{
+    display: flex;
+      /* margin-top: 50px; */
+      font-size: 30px;
+      /* text-align: center; */
+      font-weight: bold;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 600;
+      color: #FFF;
+      padding: 10px;
+      border-left: 10px solid rgb(153, 14, 14);
+      height: fit-content;
+  }
+.imageheader{
+    display: flex;
+    min-height: 100vh;
+    padding: 10px;
+    backdrop-filter: brightness(0.3);
+}
+
+.imaget{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 70vw;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 20vw;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.side{
+    display: flex;
+    padding: 20px;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #EEE;
+    background-color: #FFF;
+    min-width: 230px;
+    color: #000;
+    justify-content: space-between;
+}
+
+.side:hover{
+    box-shadow: 0px 0px 20px #EEE;
+    cursor: pointer;
+    color: #000;
+}
+
+.organize1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border-top: 1px solid grey; */
+    /* border-bottom: 1px solid grey; */
+    font-size: large;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    box-shadow: 0px 0px 20px grey;
+    padding: 10px;
+    min-width: 60vw;
+    align-self: center;
+    border-radius: 20px;
+    background-image: url('../Components/feedback.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(max-width:900px){
+    .dates{
+        flex-direction: column;
+    }
+    .date{
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .dhms{
+        height: 60px;
+        width: 60px;
+        font-size: 150%;
+    }
+    .dhmsani{
+        height: 60px;
+        width: 60px;
+        font-size: 150%;
+    }
+    .dhmsdates{
+        margin: 30px;
+    }
+    .registerdate{
+        font-size: 25px;
+        min-height: fit-content;
+        min-width: 450px;
+    }
 }
 
 @media(max-width:678px)
@@ -446,6 +600,25 @@ th{
     .logo{
         border-radius:100px;
     }
+    .imageheader{
+        height: auto;
+        flex-direction: column;
+    }
+    .imaget{
+        width: auto;
+    }
+    .images{
+        width: auto;
+    }
+    .imagetext{
+        font-size: 140px;
+    }
+    .side{
+        margin: 20px;
+    }
+    .registerdate{
+        min-width: fit-content;
+    }
     .header{
         max-width: 95vw;
         min-width: 0px;
@@ -455,27 +628,10 @@ th{
         flex-direction: column;
         justify-content: center;
     }
-    .date{
+    .organize1{
         flex-direction: column;
-        height: auto;
-        width: 100vw;
-        overflow-x: hidden;
-        padding-top: 20px;
-    }
-    .registerdate{
-        font-size: 25px;
-        min-height: fit-content;
-    }
-    .dates{
-        flex-direction: column;
-    }
-    .dhms{
-        height: 90px;
-        width: 90px;
-        font-size: 150%;
-    }
-    .dhmsdates{
-        margin: 30px;
+        justify-content: center;
+        width: 98vw;
     }
     .about{
         padding:1vh;

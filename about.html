@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
+        <div id="page">
         <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
         <div class="navigator">
         <nav class="navbar">
@@ -31,7 +33,7 @@
                 <li class="nav-item dropdown">
                     <div class="nav-link dropdown-toggle"><i class="bi bi-send-fill"></i> Registration</div>
                     <ul class="dropdown-menu">
-                        <li><a href="" class="dropdown-item"><i class="bi bi-backpack-fill"></i> Travel</a></li>
+                        <li><a href="travel.html" class="dropdown-item"><i class="bi bi-backpack-fill"></i> Travel</a></li>
                         <li><a href="register.html" class="dropdown-item"><i class="bi bi-send-fill"></i> Registration</a></li>
                     </ul>
                 </li>
@@ -50,6 +52,15 @@
             </ul>
         </nav>
     </div>
+
+    <div class="container head">
+        <div class="header">
+            <img src="./Components/logo.png" class="logo">
+            INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)
+        </div>
+    </div>
+
+
         <div class="about" id="about">
         <div class="submissionhead">About</div>
         <div class="fade-in-section abouttext">Welcome to the International Conference on Applied Mathematics, Automation, 
@@ -116,7 +127,7 @@ engineering colleges.
                 National/International Journals . 
             </div>
         </div>
-
+        </div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
     const toggler = document.querySelector(".navbar-toggler");
@@ -144,6 +155,12 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach(section => observer.observe(section));
+document.getElementById('page').style.display = 'none';
+            window.addEventListener('load', function () {
+            // Show the content once all images and resources are loaded
+            document.getElementById('page').style.display = 'block';
+            document.getElementById('load').style.display = 'none';
+            });
         </script>
     </body>
 </html>

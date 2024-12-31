@@ -128,3 +128,60 @@ register
                 </div>
                 <button type="submit" class="button">Submit</button>
             </form>
+
+
+
+
+
+            index.html about
+            <div class="about">
+                <button class="abouthead" data-toggle="collapse" data-target="#aboutcollege"> ↓ About the Institution</button>
+                <div class="collapse abouttext" id="aboutcollege">
+                    Kongu Engineering College, a leading research oriented
+ institution with excellent facilities, run by Kongu Vellalar
+ Institute of Technology Trust [KVITT] was established in the  
+year 1984.The Programmes of the institute are accredited by
+ NBA and the institute is accredited by NAAC for 5 years with
+ the grade of A++.The Institution has completely enclosed  
+with great natural beauty. It consists of 167 acres of land
+ richly endowed with beautiful Greenland. It is an
+ autonomous institution affiliated to Anna University, Chennai.
+ The college has completed 40 years of dedicated and
+ excellent service to the people of India and abroad in the
+ field of Technical Education.The institution offers 17 UG, 7 PG and 21 PhD
+ Programmes. It is one of the best self
+financing engineering colleges imparting high quality
+ technical education in Tamil Nadu, India, and is well-known
+ for its technical excellence, modern facilities, record of
+ performance with excellent results and enterprising students.
+ In the NIRF 2024 rankings, the college has been placed in
+ the 101-50 band in the Engineering category among private
+ engineering colleges.
+ <a href="https://www.kongu.ac.in" target="_blank">View Our Website</a>
+                </div>
+            </div>
+            <div class="about">
+                <button class="abouthead" data-toggle="collapse" data-target="#aboutdept"> ↓ About the Department</button>
+                <div class="collapse abouttext" id="aboutdept">
+                    The Mathematics Department occupies a prominent
+                    place in the annals of the academic history of the
+                    college since its inception in the year 1984. The
+                    department offers Ph.D degree programme and
+                    produces efficient research scholars.The department
+                    has 23 experienced faculty members including 19
+                    doctorates with different specializations in
+                    Mathematics and its applications. A good number of
+                    research papers are published by the faculty in
+                    National/International Journals . 
+                </div>
+            </div>
+            <div class="about">
+                <button class="abouthead" data-toggle="collapse" data-target="#about"> ↓ About the Conference</button>
+                <div class="collapse abouttext" id="about">
+                    The International Conference on Applied Mathematics, Automation and Computing gathers researchers, academicians and professionals in the fields of Applied Mathematics, Automation and Computational Science. The conference serves as a platform for presenting and discussing the latest research developments, methodologies and applications in these areas. The conference focuses on the mathematical aspects of computing and the symbiosis between Mathematics, Automation and computer science. It gives researchers an opportunity to deepen in the practical application of mathematical information on informatics. It brings together leading scientists, researchers, and practitioners from around the world, the conference offers a platform to present cutting-edge research, exchange ideas, and foster collaborations across disciplines. The Conference will take place with physical and virtual participation.
+                    <a href="about.html#about">View About</a>
+            </div>
+                </div>
+
+
+

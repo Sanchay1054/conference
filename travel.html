@@ -12,6 +12,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
+        <div id="page">
         <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
         <div class="navigator">
         <nav class="navbar">
@@ -52,11 +54,11 @@
         </nav>
     </div>
         <div class="venue" id="location">
-            <div><iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Kongu%20Engineering%20College,%20Perundurai,%20Erode+(KONGU%20ENGINEERING%20COLLEGE)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
+            <!-- <div><iframe width="200" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Kongu%20Engineering%20College,%20Perundurai,%20Erode+(KONGU%20ENGINEERING%20COLLEGE)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps tracker sport</a></iframe></div> -->
             <div class="fade-in-section venuet">The International Conference on Applied Mathematics, Automation and  
                 Computing (ICAMAC 2025) will occur in the <b><br><br>Sir.C.V.Raman Seminar Hall,<br>Science 
                 and Humanities block <br>KONGU ENGINEERING COLLEGE<br>PERUNDURAI - 638060<br>TAMIL NADU<br>INDIA<br><br></b> presentation will take place in Audio-Visual presentation hall 
-                of the Science and Humanities, Kongu Engineering College, Perundurai.</div>
+                of the Science and Humanities, Kongu Engineering College, Perundurai.<a href="https://www.google.com/maps/search/Kongu+Engineering+College,+Perundurai,+Erode/@11.270282,77.60364,14z?hl=en&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: #0F0;"> View in maps <i class="bi bi-geo-alt-fill"></i></a></div>
         </div>
         <div class="container">
             <div class="fade-in-section travel">
@@ -84,11 +86,13 @@
             </div>
             <div class="roadimg">
                 <div class="fade-in-section road">
-                <div class="submissionhead">By Train</div>
-                <div>  Most northern states of India are well connected to Coimbatore by railways. <br>
-                    From Coimbatore, board a bus to reach Perundurai.</div>
+                <div class="submissionhead">By Road</div>
+                <div>   The quickest and cheapest way is to arrive in either Coimbatore or Salem and     
+                    take a bus to reach Perundurai. All neighboring states Kerala, Karnataka, Andhra 
+                    Pradesh, and Telangana are well connected by highway transport.</div>
                 </div>
             </div>
+        </div>
         </div>
         <script>
 
@@ -118,6 +122,12 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach(section => observer.observe(section));
+document.getElementById('page').style.display = 'none';
+            window.addEventListener('load', function () {
+            // Show the content once all images and resources are loaded
+            document.getElementById('page').style.display = 'block';
+            document.getElementById('load').style.display = 'none';
+            });
         </script>
     </body>
 </html>

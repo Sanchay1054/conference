@@ -18,6 +18,8 @@
         </style>
     </head>
     <body>
+        <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
+        <div id="page">
         <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
         <div class="navigator">
             <nav class="navbar">
@@ -182,7 +184,8 @@
             <div class="deligatest">
                 <div class="deligatesfaculty"> 
                     <img src="./Components/Faculty/Dr.A.Manimaran_sir.png" class="fade-in-grow deligatesfacultyimg"/>
-                    <div>Dr A.Manimaran <a href="https://sites.google.com/a/kongu.edu/manimaran-a" target="_blank"><i class="bi bi-arrow-bar-right"></i></a></div></div>
+                    <div>Dr A.Manimaran <a href="https://sites.google.com/a/kongu.edu/manimaran-a" target="_blank"><i class="bi bi-arrow-bar-right"></i></a>
+                        <div class="click" id="click">Click <i class="bi bi-arrow-bar-right"></i> to see profile</div></div></div>
                 <div class="deligatesfaculty"> 
                     <img src="./Components/Faculty/Thamilselvi_mam.png" class="fade-in-grow deligatesfacultyimg"/>
                 <div>Dr.K.V.Tamil Selvi <a href="https://sites.google.com/a/kongu.edu/tamilselvi-maths" target="_blank"><i class="bi bi-arrow-bar-right"></i></a></div></div>
@@ -287,6 +290,7 @@
             
             </div>
     </div>
+        </div>
     
 
     <script>
@@ -320,6 +324,7 @@ sections.forEach(section => observer.observe(section));
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll(".fade-in-grow");
+  const click = document.getElementById("click");
 
   const handleScroll = () => {
     images.forEach((image) => {
@@ -328,6 +333,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (isVisible) {
         image.classList.add("visible");
+        click.timer = setTimeout(() => {
+            click.style.display = 'none';
+        }, 3000);
       }
     });
   };
@@ -335,7 +343,12 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", handleScroll);
   handleScroll(); // Run on page load in case images are already in view
 });
-
+document.getElementById('page').style.display = 'none';
+            window.addEventListener('load', function () {
+            // Show the content once all images and resources are loaded
+            document.getElementById('page').style.display = 'block';
+            document.getElementById('load').style.display = 'none';
+            });
 
 
     </script>

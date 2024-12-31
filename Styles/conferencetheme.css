@@ -56,20 +56,18 @@ body{
 }
 
 .submissionhead{
-    display: flex;
-    margin-top: 10px;
-    padding: 2vh;
-    background-color: rgb(17, 139, 17);
+    margin-top: 20px;
+    padding: 10px;
+    color: rgb(23, 163, 23);
     border-radius: 10px;
-    color: #FFF;
-    font-weight: 600;
+    /* color: #FFF; */
+    font-weight: 800;
     font-size: 150%;
-    width: fit-content;
-    margin: 10px;
+    background-color: #FFF;
 }
 
 .submissiontext{
-    padding: 2vh;
+    padding: 5px;
     font-size: 150%;
     /* padding: 5vh; */
     text-align: center;
