@@ -164,8 +164,9 @@ img.fade-in-grow.visible {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     font-size: larger;
+    overflow: hidden;
 }
 .loader{
     display: flex;

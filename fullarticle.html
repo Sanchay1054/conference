@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles/navbar.css">
+    <link rel="stylesheet" href="./Styles/conferencetheme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Article</title>
+</head>
+<body>
+    <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
+    <div id="page">
+    <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
+    <div class="navigator">
+    <nav class="navbar">
+        <div class="navhead">ICAMAC25</div>
+        <button class="navbar-toggler">
+            Menu
+        </button>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
+            </li>
+            <li class="nav-item">
+                <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
+            </li>
+            <li class="nav-item">
+                <a href="importantdates.html" class="nav-link"><i class="bi bi-calendar2-event-fill"></i> Important Dates</a>
+            </li>
+            <li class="nav-item dropdown">
+                <div class="nav-link dropdown-toggle"><i class="bi bi-send-fill"></i> Registration</div>
+                <ul class="dropdown-menu">
+                    <li><a href="travel.html" class="dropdown-item"><i class="bi bi-backpack-fill"></i> Travel</a></li>
+                    <li><a href="register.html" class="dropdown-item"><i class="bi bi-send-fill"></i> Registration</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <div class="nav-link dropdown-toggle"><i class="bi bi-newspaper"></i> Submission</div>
+                <ul class="dropdown-menu">
+                    <li><a href="submission.html" class="dropdown-item"> Abstract</a></li>
+                    <li><a href="fullarticle.html" class="dropdown-item"> Full Length Article</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="invitedspeakers.html" class="nav-link"><i class="bi bi-megaphone-fill"></i> Keynote Speakers</a></li>
+            </li>
+            <li class="nav-item">
+                <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
+            </li>
+            <li class="nav-item">
+                <a href="contactus.html" class="nav-link"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+    <div class="container">
+        <div class="submissionhead">Full Length Article</div>
+        <div class="submissiontext">
+            Submit the article in the below Link.<br>
+            <a href="https://cmt3.research.microsoft.com/ICAMAC2025" class="button" target="_blank">ICAMAC2025 <i class="bi bi-arrow-bar-right"></i></a>
+            Create a new Login in CMT if you are a new user.
+        </div>
+        <div class="submissionhead" id="template">Template</div>
+        <div class="submissiontext">
+            <a href="Sample_Template_ICAMAC2025.docx" download="Sample_Template_ICAMAC2025.docx">Click to download the Template <i class="bi bi-cloud-arrow-down-fill"></i></a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('page').style.display = 'none';
+            window.addEventListener('load', function () {
+            // Show the content once all images and resources are loaded
+            document.getElementById('page').style.display = 'block';
+            document.getElementById('load').style.display = 'none';
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbar-toggler");
+    const navMenu = document.querySelector(".navbar-nav");
+
+    toggler.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+});
+    </script>
+</body>
+</html>

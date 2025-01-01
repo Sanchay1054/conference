@@ -46,3 +46,18 @@ body{
     margin-top: 20px;
     scrollbar-width: thin;
 }
+
+.submissiontd{
+    display: flex;
+    min-height: 50px;
+    max-height: 200px;
+    overflow-y: scroll;
+    max-width: 200px;
+    scrollbar-width: thin;
+}
+
+.submissionwidth{
+    max-width: 200px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}

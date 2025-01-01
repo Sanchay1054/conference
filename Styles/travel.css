@@ -10,7 +10,8 @@ body{
     background-image: url('../Components/kec.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     padding: 10px;
 }
 
@@ -129,7 +130,7 @@ body{
         height: auto;
     }
     .venuet{
-        width: 80vw;
+        width: 100vw;
     }
     .travel{
         width: auto;
@@ -151,5 +152,11 @@ body{
     }
     .road{
         width: auto;
+    }
+    .container{
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
     }
 }

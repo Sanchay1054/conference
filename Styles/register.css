@@ -121,7 +121,7 @@ th{
 .registertext{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 99vw;
     background-image: url('../Components/register.png');
     background-repeat: no-repeat;
@@ -137,12 +137,14 @@ th{
     align-items: center;
     justify-content: center;
     margin: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px grey;
+    border-left: 10px solid rgb(67, 161, 67);
+    /* border-radius: 20px; */
+    /* box-shadow: 0px 0px 10px grey; */
     padding: 20px;
-    min-width: 430px;
+    min-width: 30vw;
     min-height: 430px;
     backdrop-filter: blur(10px);
+    align-items: normal;
 }
 
 .registerdetail{
@@ -190,7 +192,7 @@ th{
         padding-right: 10px;
     }
     .registert{
-        min-width: fit-content;
+        min-width: 98vw;
         min-height: fit-content;
     }
 }

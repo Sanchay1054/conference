@@ -2,6 +2,7 @@
     background-image: url('../Components/conference1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: center;
 }
 
 @media(max-width: 678px)

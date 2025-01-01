@@ -24,7 +24,10 @@
                         <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
+                        <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
                     </li>
                     <li class="nav-item">
                         <a href="importantdates.html" class="nav-link"><i class="bi bi-calendar2-event-fill"></i> Important Dates</a>
@@ -36,14 +39,18 @@
                             <li><a href="register.html" class="dropdown-item"><i class="bi bi-send-fill"></i> Registration</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle"><i class="bi bi-newspaper"></i> Submission</div>
+                        <ul class="dropdown-menu">
+                            <li><a href="submission.html" class="dropdown-item"> Abstract</a></li>
+                            <li><a href="fullarticle.html" class="dropdown-item"> Full Length Article</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a href="invitedspeakers.html" class="nav-link"><i class="bi bi-megaphone-fill"></i> Keynote Speakers</a></li>
                     </li>
                     <li class="nav-item">
-                            <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
+                        <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
                     </li>
                     <li class="nav-item">
                         <a href="contactus.html" class="nav-link"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
@@ -58,7 +65,7 @@
                     fees successfully. Furthermore, for each paper/poster, at least one author can attend and 
                     pay the registration fee. In addition, the delegates can choose various options to 
                     participate in the conference.</div>
-                <a href="travel.html" class="button1">Travel Details <i class="bi bi-arrow-bar-right"></i></a>
+                
             </div>
         <div class="registerhead" id="payment">
             <div>
@@ -106,7 +113,7 @@
             </div>
         </div>
         <div class="container">
-            <b class="registerhead" style="margin: 0px; padding: 0px;">Fee Details<br>Kindly Pay the Fee with the above details</b>
+            <b class="registerhead" style="margin: 0px; padding: 0px;">Fee Details</b>
             <table class="table table-bordered table-striped text-center align-middle">
                 <thead class="table-light">
                   <tr>
@@ -129,7 +136,7 @@
                   </tr>
                   <tr>
                     <td colspan="2">Participants (non-authors)</td>
-                    <td>Rs. 750</td>
+                    <td>Rs. 500</td>
                   </tr>
                   <!-- International Participants -->
                   <tr>
@@ -139,21 +146,13 @@
                     <td colspan="2">Onsite Faculty/Scientist from Academic/Research institutions</td>
                     <td>USD 40</td>
                   </tr>
-                  <tr>
-                    <td colspan="2">Online Delegates with presentation</td>
-                    <td>USD 30</td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">Online Participants</td>
-                    <td>USD 25</td>
-                  </tr>
                 </tbody>
               </table>
         </div>
         <div class="container">
             <b class="head">REGISTER</b>
         </div>
-        <form class="register" method="POST" action="http://localhost:3000/api/register">
+        <form class="register" method="POST" action="https://conference-backend-2.onrender.com/api/register">
             <div class="registertext">
                 <div class="fade-in-section registert">
                     <b class="registerheading">Personal Details</b>
@@ -247,7 +246,6 @@
                         <input type="radio" name="accomodation" value="Not Required" checked />0 day
                         <input type="radio" name="accomodation" value="1 day"  />1 day
                         <input type="radio" name="accomodation" value="2 days"  />2 days
-                        <input type="radio" name="accomodation" value="3 days"  />3 days
                     </div>
                 </div>
                 <div class="registerdetail">
@@ -266,11 +264,8 @@
             <div class="head" id="notice">NOTICE</div>
             <div class="text">
                 Accommodation will be provided for the
-                participants  on request, at a nominal  cost in
+                participants  on request at a nominal  cost in
                 the college campus.<br>
-                <a href="conferencethemes.html#submission">View Submission Details <i class="bi bi-arrow-bar-right"></i></a><br>
-                <a href="conferencethemes.html#theme">Conference Themes <i class="bi bi-arrow-bar-right"></i></a><br>
-                <a href="conferencethemes.html#template">Template <i class="bi bi-arrow-bar-right"></i></a>
             </div>
         </div>
         </div>

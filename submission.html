@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles/navbar.css">
+    <link rel="stylesheet" href="./Styles/submission.css">
+</head>
+<body>
+    <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
+        <div id="page">
+        <div class="navbar1">INTERNATIONAL CONFERENCE ON APPLIED MATHEMATICS, AUTOMATION AND COMPUTING (ICAMAC25)<br></div>
+        <div class="navigator">
+            <nav class="navbar">
+                <div class="navhead">ICAMAC25</div>
+                <button class="navbar-toggler">
+                    Menu
+                </button>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="importantdates.html" class="nav-link"><i class="bi bi-calendar2-event-fill"></i> Important Dates</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle"><i class="bi bi-send-fill"></i> Registration</div>
+                        <ul class="dropdown-menu">
+                            <li><a href="travel.html" class="dropdown-item"><i class="bi bi-backpack-fill"></i> Travel</a></li>
+                            <li><a href="register.html" class="dropdown-item"><i class="bi bi-send-fill"></i> Registration</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle"><i class="bi bi-newspaper"></i> Submission</div>
+                        <ul class="dropdown-menu">
+                            <li><a href="submission.html" class="dropdown-item"> Abstract</a></li>
+                            <li><a href="fullarticle.html" class="dropdown-item"> Full Length Article</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invitedspeakers.html" class="nav-link"><i class="bi bi-megaphone-fill"></i> Keynote Speakers</a></li>
+                    </li>
+                    <li class="nav-item">
+                        <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contactus.html" class="nav-link"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="subcontainer">
+                <div class="subflex">
+                <div class="info">
+                    <div class="head">Upload the Abstract in the below Registration Form</div><br>
+                    <div class="head">Article Details</div>
+                    <div class="formcontent">
+                        Title of the Article<br>
+                        <input type="text" id="title" name="title" placeholder="Title Of The Article">
+                    </div>
+                    <div class="formcontent">
+                        Abstract (250 words)<br>
+                        <textarea id="abstract" name="abstract" placeholder="Your abstract goes here..."></textarea>
+                    </div>
+                    <div class="formcontent">
+                        Keywords (separate with commas)<br>
+                        <input type="text" id="keywords" name="keywords" placeholder="Keyword1, Keyword2, ...">
+                    </div>
+                </div>
+                <div class="author">
+                    <div class="head">Author's Details</div>
+                    <div id="input-section">
+                        <div class="formcontent">
+                        Author1<br>
+                        <input type="text" name="name-1" id="name-1" placeholder="Name" required>
+                        <input type="text" name="institution-1" id="institution-1" placeholder="Institution Name" required>
+                        <input type="text" name="department-1" id="department-1" placeholder="Department" required>
+                        <input type="text" name="mail-1" id="mail-1" placeholder="Mail ID" required>
+                        </div>
+                    </div>
+                    <button id="add-btn" class="addauthor">Add Author</button><br>
+                    <!-- <div id="display-section" class="display-container">
+                        <h3>Entered Data:</h3>
+                        <div id="display-data"></div>
+                    </div> -->
+                </div>
+                </div>
+                <input type="button" value="submit" class="submit" onclick="submit1()">
+                    <div id="alert" class="alert"></div>
+                    <div id="submitted" class="submitted"></div>
+            </div>
+        </div>
+
+        
+    
+
+        <script>
+            document.getElementById('page').style.display = 'none';
+            window.addEventListener('load', function () {
+            // Show the content once all images and resources are loaded
+            document.getElementById('page').style.display = 'block';
+            document.getElementById('load').style.display = 'none';
+            });
+
+
+
+            let inputCount = 1;
+            let numbers = [1];
+
+        // Add Button Handler
+        document.getElementById("add-btn").addEventListener("click", () => {
+            inputCount++;
+            const inputSection = document.getElementById("input-section");
+
+            // Create a container for inputs
+            const container = document.createElement("div");
+            container.classList.add("input-container");
+            container.setAttribute("id", `input-container-${inputCount}`);
+
+            // Create Name Input
+            const nameInput = document.createElement("input");
+            nameInput.type = "text";
+            nameInput.placeholder = "Name";
+            nameInput.setAttribute("id", `name-${inputCount}`);
+
+            const authorText = document.createElement("p");
+            authorText.innerHTML = `Author ${inputCount}`;
+
+            // Create Institution Input
+            const institutionInput = document.createElement("input");
+            institutionInput.type = "text";
+            institutionInput.placeholder = "Institution Name";
+            institutionInput.setAttribute("id", `institution-${inputCount}`);
+
+            // Create Mail ID Input
+            const mailInput = document.createElement("input");
+            mailInput.type = "email";
+            mailInput.placeholder = "Mail ID";
+            mailInput.setAttribute("id", `mail-${inputCount}`);
+
+            const departmentInput= document.createElement("input");
+            departmentInput.type = "text";
+            departmentInput.placeholder = "Department";
+            departmentInput.setAttribute("id", `department-${inputCount}`);
+
+            // Create Delete Button
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = `Delete Author ${inputCount}`;
+            deleteButton.setAttribute("type", "button");
+            deleteButton.className = "del"
+            deleteButton.id = inputCount;
+            deleteButton.addEventListener("click", (e) => {
+                // inputCount--;
+                console.log(e.target);
+                document.getElementById(`input-container-${e.target.id}`).remove();
+                numbers.splice(numbers.indexOf(parseInt(e.target.id)),1);
+                console.log(numbers);
+                // updateDisplay();
+                // console.log(numbers.indexOf(parseInt(e.target.id)));
+            });
+
+            // Append inputs and delete button to the container
+            container.appendChild(authorText);
+            container.appendChild(nameInput);
+            container.appendChild(institutionInput);
+            container.appendChild(departmentInput);
+            container.appendChild(mailInput);
+            container.appendChild(deleteButton);
+
+            // Append container to the input section
+            inputSection.appendChild(container);
+            numbers.push(inputCount);
+            console.log(numbers);
+
+            // Update display
+            // updateDisplay();
+        });
+
+        // Function to update the display section
+        function updateDisplay() {
+            const displayData = document.getElementById("display-data");
+            displayData.innerHTML = ""; // Clear previous data
+
+            // Collect all input containers
+            const containers = document.querySelectorAll(".input-container");
+            containers.forEach((container, index) => {
+                const name = container.querySelector(`input[name="name-${index + 1}"]`)?.value || "";
+                const institution = container.querySelector(`input[name="institution-${index + 1}"]`)?.value || "";
+                const mail = container.querySelector(`input[name="mail-${index + 1}"]`)?.value || "";
+
+                // Display the collected data
+                const entry = document.createElement("p");
+                entry.textContent = `Name: ${name}, Institution: ${institution}, Mail: ${mail}`;
+                displayData.appendChild(entry);
+            });
+        }
+
+        // Update display when inputs are modified
+        // document.body.addEventListener("input", updateDisplay);
+
+
+        async function submit1(){
+            let title = document.getElementById("title").value;
+            let abstract = document.getElementById("abstract").value;
+            let keywords = document.getElementById("keywords").value;
+            let name = document.getElementById("name-1").value;
+            let institution = document.getElementById("institution-1").value;
+            let department = document.getElementById("department-1").value;
+            let mail = document.getElementById("mail-1").value;
+            // console.log(title.length);
+            if(title.length==0)
+            {
+                document.getElementById("alert").innerHTML = "Please fill the Title";
+                setTimeout(()=>{
+                document.getElementById("alert").innerHTML = "";},5000);
+                return;
+            }
+            else if(keywords.length==0)
+            {
+                document.getElementById("alert").innerHTML = "Please fill the Keywords";
+                setTimeout(()=>{
+                document.getElementById("alert").innerHTML = "";},5000);
+                return;
+            }
+            else if(name.length==0)
+            {
+                document.getElementById("alert").innerHTML = "Please fill the Author Name";
+                setTimeout(()=>{
+                document.getElementById("alert").innerHTML = "";},5000);
+                return;
+            }
+            else if(institution.length==0)
+            {
+                document.getElementById("alert").innerHTML = "Please fill the Author's Institution Name";
+                setTimeout(()=>{
+                document.getElementById("alert").innerHTML = "";},5000);
+                return;
+            }
+            else if(department.length==0)
+            {
+                document.getElementById("alert").innerHTML = "Please fill the Author's Department";
+                setTimeout(()=>{
+                document.getElementById("alert").innerHTML = "";},5000);
+                return;
+            }
+            else if(mail.length==0)
+            {
+                document.getElementById("alert").innerHTML = "Please fill the Author's Mail";
+                setTimeout(()=>{
+                document.getElementById("alert").innerHTML = "";},5000);
+                return;
+            }
+            else if(abstract.length==0)
+            {
+                document.getElementById("alert").innerHTML = "Abstract should be about 250 words";
+                setTimeout(()=>{
+                document.getElementById("alert").innerHTML = "";},5000);
+                return;
+            }
+            let authorName = [];
+            let authorInstitution = [];
+            let authorMail = [];
+            let authorDepartment = [];
+            for(i=0; i<numbers.length; i++){
+                // console.log(numbers[i]);
+                authorName.push(document.getElementById(`name-${numbers[i]}`).value);
+                authorInstitution.push(document.getElementById(`institution-${numbers[i]}`).value);
+                authorDepartment.push(document.getElementById(`department-${numbers[i]}`).value);
+                authorMail.push(document.getElementById(`mail-${numbers[i]}`).value);
+            }
+            console.log("author's Name",authorName);
+            console.log("author's Institution",authorInstitution);
+            console.log("author's Department",authorDepartment);
+            console.log("author's mail",authorMail);
+
+            const data = {
+                title: title,
+                abstract:abstract,
+                keywords: keywords,
+                name: authorName,
+                institution: authorInstitution,
+                department: authorDepartment,
+                mail: authorMail
+            };
+
+            try{
+                document.getElementById("submitted").innerHTML = "Submitting...";
+            }
+            catch(err){
+                console.log("Submitted");
+            }
+
+            try {
+                const response = await fetch('https://conference-backend-2.onrender.com/submission', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    try{
+                document.getElementById("submitted").innerHTML = "Submitted...";
+            }
+            catch(err){
+                console.log("Submitted");
+            }
+                    const result = await response.json();
+                    // document.getElementById('response-message').textContent = 'Form submitted successfully!';
+                    window.alert("Submitted Successfully");
+                    console.log(result);
+                    location.reload(true);
+                } else {
+                    document.getElementById('alert').textContent = 'Failed to submit the form.';
+                    console.error('Error:', response.status, response.statusText);
+                }
+            } catch (error) {
+                document.getElementById('alert').textContent = 'An error occurred while submitting the form.';
+                console.error('Error:', error);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+                const toggler = document.querySelector(".navbar-toggler");
+                const navMenu = document.querySelector(".navbar-nav");
+                
+                toggler.addEventListener("click", function () {
+                    navMenu.classList.toggle("active");
+                });
+            });
+
+        </script>
+</body>
+</html>

@@ -25,7 +25,10 @@
                         <a href="index.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
+                        <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
                     </li>
                     <li class="nav-item">
                         <a href="importantdates.html" class="nav-link"><i class="bi bi-calendar2-event-fill"></i> Important Dates</a>
@@ -37,14 +40,18 @@
                             <li><a href="register.html" class="dropdown-item"><i class="bi bi-send-fill"></i> Registration</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle"><i class="bi bi-newspaper"></i> Submission</div>
+                        <ul class="dropdown-menu">
+                            <li><a href="submission.html" class="dropdown-item"> Abstract</a></li>
+                            <li><a href="fullarticle.html" class="dropdown-item"> Full Length Article</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a href="invitedspeakers.html" class="nav-link"><i class="bi bi-megaphone-fill"></i> Keynote Speakers</a></li>
                     </li>
                     <li class="nav-item">
-                            <a href="about.html" class="nav-link"><i class="bi bi-hand-index-fill"></i> About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="conferencethemes.html" class="nav-link"><i class="bi bi-file-earmark-spreadsheet-fill"></i> Call for papers </a>
+                        <a href="organizingcommittee.html" class="nav-link"><i class="bi bi-people-fill"></i> Organizing Committee</a>
                     </li>
                     <li class="nav-item">
                         <a href="contactus.html" class="nav-link"><i class="bi bi-person-lines-fill"></i> Contact Us</a>
@@ -56,40 +63,44 @@
             <div class="submissionhead">Invited Speakers</div>
             <div class="deligates deligatesbackground"><div class="deligateshead">CONFERENCE DELIGATES</div>
                 <div class="deligatest">
+                    
                     <div class="deligatestext">
                         <img src="./Components/Screenshot 2024-12-07 115351.png" class="fade-in-grow deligatesimg"/>
-                        Dr. Mohana Sundaram Muthuvalu
-                        , Professor Department of
-                        Fundamental & Applied Sciences
-                        Universiti Teknologi Petronas
+                        Dr. Mohana Sundaram Muthuvalu<br>
+                        Professor<br> Department of
+                        Fundamental & Applied Sciences<br>
+                        Universiti Teknologi Petronas<br>
                         Malaysia</div>
                         <div class="deligatestext">
                             <img src="./Components/Screenshot 2024-12-07 115358.png" class="fade-in-grow deligatesimg"/>
-                        Natesan Srinivasan , Professor
-                        Department of Mathematics Indian
-                        Institute of Technology Guwahati
-                        Guwahati, Assam, India - 781039</div>
+                        Natesan Srinivasan <br> Professor<br>
+                        Department of Mathematics <br>Indian
+                        Institute of Technology Guwahati<br>
+                        Guwahati, Assam<br> India - 781039</div>
+                    
+                    
                         <div class="deligatestext">
                         <img src="./Components/Screenshot 2024-12-10 105704.png" class="fade-in-grow deligatesimg"/>
-                        Dr. K. Kaliraj is Assistant professor
-                        in the Department of Ramanujan
-                        Institute for Advanced Study in
-                        Mathematics, University of Madras</div>
+                        Dr. K. Kaliraj <br> Assistant professor<br>
+                         Ramanujan
+                        Institute for <br>Advanced Study in
+                        Mathematics <br> University of Madras</div>
                         <div class="deligatestext">
                             <img src="./Components/Screenshot 2024-12-10 105723.png" class="fade-in-grow deligatesimg"/>
-                            Dr.R.Balasubramanian ,
-                            Professor and Head Department
-                            of Computer Science and
-                            Engineering, Indian Institute of
-                            Technology, Roorkee, Roorkee 
-                            Haridwar Highway, Roorkee,
+                            Dr.R.Balasubramanian <br>
+                            Professor and Head Department<br>
+                            Computer Science and
+                            Engineering<br> Indian Institute of
+                            Technology Roorkee<br> Roorkee 
+                            Haridwar Highway<br> Roorkee,
                             Uttarakhand 247667</div>
+                    
                         <div class="deligatestext"> 
                             <img src="./Components/Screenshot 2024-12-10 145938.png" class="fade-in-grow deligatesimg"/>
-                            Dr. Md. Golam Hafez , Professor
-                            Department of Mathematics
+                            Dr. Md. Golam Hafez <br> Professor<br>
+                            Department of Mathematics<br>
                             Chittagong University of
-                            Engineering & Technology
+                            Engineering & Technology<br>
                             Chattogram - 4349 Bangladesh</div>
                         </div>
         </div>
@@ -107,29 +118,46 @@ toggler.addEventListener("click", function () {
 
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".fade-in-grow");
+//   const images = document.querySelectorAll(".fade-in-grow");
 
-  const handleScroll = () => {
-    images.forEach((image) => {
-      const rect = image.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+//   const handleScroll = () => {
+//     images.forEach((image) => {
+//       const rect = image.getBoundingClientRect();
+//       const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
 
-      if (isVisible) {
-        image.classList.add("visible");
-      }
-    });
-  };
+//       if (isVisible) {
+//         image.classList.add("visible");
+//       }
+//     });
+//   };
 
 //   window.addEventListener("scroll", handleScroll);
-  handleScroll(); // Run on page load in case images are already in view
+//   handleScroll(); // Run on page load in case images are already in view
   document.getElementById('page').style.display = 'none';
             window.addEventListener('load', function () {
             // Show the content once all images and resources are loaded
             document.getElementById('page').style.display = 'block';
             document.getElementById('load').style.display = 'none';
-            handleScroll();
+            // handleScroll();
             });
 });
+
+const sections = document.querySelectorAll('.fade-in-grow');
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the visible class and stop observing
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Unobserve to ensure it only triggers once
+      }
+    });
+  },
+  { threshold: 0.2 } // Trigger when 10% of the element is visible
+);
+
+sections.forEach(section => observer.observe(section));
 
     </script>
     </body>
