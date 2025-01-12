@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./Styles/registrations.css">
     <title>Registrations</title>
+    <link rel="icon" href="./Components/logo.png" type="image/x-icon">
     <style>
         table {
             /* width: 100vw; */
@@ -31,6 +32,7 @@
     <table id="registrationsTable" >
         <thead>
             <tr>
+                <th>S.no.</th>
                 <th>Timestamp (YY/MM/DD)</th>
                 <th>Salutation</th>
                 <th>First Name</th>
@@ -113,9 +115,10 @@
             tableBody.innerHTML = '';
 
             // Populate the table with the fetched data
-            registrations.forEach((registration) => {
+            registrations.forEach((registration,i) => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
+                    <td>${i+1}</td>
                     <td>${registration.time}</td>
                     <td>${registration.salutation}</td>
                     <td>${registration.firstname}</td>
@@ -128,7 +131,7 @@
                     <td>${registration.designation}</td>
                     <td>${registration.student_year}</td>
                     <td>${registration.presenter}</td>
-                    <td>${registration.payment}</td>
+                    <td><a href='${registration.payment}' target='_blank'>${registration.payment}</a></td>
                     <td>${registration.mode}</td>
                     <td>${registration.accomodation}</td>
                     <td>${registration.address}</td>
@@ -155,7 +158,7 @@
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = 'table_data.csv';
+            link.download = 'registration.csv';
             link.click();
         });
 
@@ -188,7 +191,7 @@
             const url = URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = 'table_data.xls';
+            link.download = 'registration.xls';
             link.click();
         });
 </script>

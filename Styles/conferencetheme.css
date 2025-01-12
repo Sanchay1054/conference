@@ -95,15 +95,21 @@ a:hover{
     /* height: 100vh; */
     align-items: center;
     justify-content: space-evenly;
-    backdrop-filter: brightness(0.5);
+    /* backdrop-filter: brightness(0.3); */
     color: #FFF;
 }
 
 .authort{
-    padding: 10px;
+    padding: 20px;
     margin: 20px;
     font-size: large;
     width: 60vw;
+    backdrop-filter: brightness(0.2);
+    border-radius: 20px;
+}
+
+.authort ul li{
+    margin-bottom: 10px;
 }
 
 .button{
@@ -125,6 +131,9 @@ a:hover{
 
 @media(max-height:678px){
     .authort{
+        margin: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
         width: auto;
     }
 }

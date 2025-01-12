@@ -120,13 +120,14 @@ th{
 
 .registertext{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 99vw;
-    background-image: url('../Components/register.png');
+    width: fit-content;
+    /* background-image: url('../Components/register.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: center;
+    background-position-y: center; */
 }
 
 .registert{
@@ -137,13 +138,13 @@ th{
     align-items: center;
     justify-content: center;
     margin: 20px;
-    border-left: 10px solid rgb(67, 161, 67);
+    /* border-left: 10px solid rgb(67, 161, 67); */
     /* border-radius: 20px; */
     /* box-shadow: 0px 0px 10px grey; */
     padding: 20px;
     min-width: 30vw;
-    min-height: 430px;
-    backdrop-filter: blur(10px);
+    /* min-height: 430px; */
+    /* backdrop-filter: blur(10px); */
     align-items: normal;
 }
 
@@ -152,6 +153,7 @@ th{
 }
 
 .registerheading{
+    display: flex;
     font-weight: 600;
     font-size: 120%;
     margin-bottom: 10px;
@@ -179,6 +181,20 @@ th{
     margin-left: 5vh;
 }
 
+.enabled{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 60vw;
+    background-color: rgb(228, 248, 228);
+    color: rgb(67, 161, 67);
+    border: 1px solid rgb(67, 161, 67);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+}
+
 @media(max-width:678px)
 {
     .registerhead{
@@ -194,5 +210,6 @@ th{
     .registert{
         min-width: 98vw;
         min-height: fit-content;
+        margin: 0px;
     }
 }

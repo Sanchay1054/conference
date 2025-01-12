@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Contact us</title>
+        <link rel="icon" href="./Components/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="./Styles/navbar.css">
@@ -90,8 +91,9 @@
         </div>
         </div>
         
-        <div class="container">
-            <form class="fade-in-section feedback" method="post" action="https://conference-backend-2.onrender.com/feedback">
+        <div class="container"> 
+            <!-- <method="post" action="https://conference-backend-2.onrender.com/feedback"></method> -->
+            <form class="fade-in-section feedback" >
                 <div class="submissionhead">Enquiry</div>
                 <div>
                     Name <i class="bi bi-person-fill"></i><br>
@@ -137,7 +139,7 @@
                     Query <i class="bi bi-envelope-paper-fill"></i><br>
                     <textarea row="5" cols="25" placeholder="Enter your feedback here..." name="feedback" required></textarea>
                 </div>
-                <button class="button" type="submit">submit</button>
+                <input class="button" type="button" id="submit1" value="submit" onclick="submitQuery()">
             </form>
         </div>
         <div class="footer">
@@ -168,11 +170,98 @@
             async function fetchurl(){
                 try{
                 const data = await fetch("https://conference-backend-2.onrender.com/feedbacks");
-                document.getElementById("submit").innerHTML = "";
                 }
                 catch{
 
                 };
+            }
+
+            async function submitQuery(){
+                try{
+                    const name = document.querySelector("input[name='name']").value;
+                    const email = document.querySelector("input[name='email']").value;
+                    const phonenumber = document.querySelector("input[name='phonenumber']").value;
+                    const rating = document.querySelector("input[name='rating']:checked");
+                    const feedback = document.querySelector("textarea[name='feedback']").value;
+
+                    if(name.length===0)
+                    {
+                        alert("Please fill the Name");
+                        document.querySelector("input[name='name']").focus();
+                        return;
+                    }
+                    if(email.length===0)
+                    {
+                        alert("Please fill the Email");
+                        document.querySelector("input[name='email']").focus();
+                        return;
+                    }
+                    if(phonenumber.length===0)
+                    {
+                        alert("Please fill the Phone Number");
+                        document.querySelector("input[name='phonenumber']").focus();
+                        return;
+                    }
+                    if(feedback.length===0)
+                    {
+                        alert("Please fill the Query");
+                        document.querySelector("textarea[name='feedback']").focus();
+                        return;
+                    }
+                    console.log(rating);
+                    let ratingValue = "";
+                    if(rating===null || rating===undefined)
+                    {
+                        console.log(rating);
+                        ratingValue = "not provided";
+                    }
+                    else{
+                        ratingValue = rating.value;
+                    }
+
+                    const data = {
+                        name,
+                        email,
+                        phonenumber,
+                        rating:ratingValue,
+                        feedback
+                    }
+
+                    try {
+                        document.getElementById("submit1").disabled = true;
+                const response = await fetch('https://conference-backend-2.onrender.com/feedback', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    // document.getElementById('response-message').textContent = 'Form submitted successfully!';
+                    window.alert("Submitted Successfully.\n ");
+                    console.log(result);
+                    location.reload(true);
+                } else {
+                    window.alert("Please check your Internet Connection");
+                    console.error('Error:', response.status, response.statusText);
+                    document.getElementById("submit1").disabled = false;
+                    return;
+                }
+            } catch (error) {
+                document.getElementById("submit1").disabled = false;
+                window.alert("Please check your Internet Connection");
+                console.error('Error:', error);
+            }
+                }
+                catch(err)
+                {
+                    window.alert("An error occurred: "+err.message);
+                    document.getElementById("submit1").disabled = false;
+                    console.log(err.message);
+                }
+                document.getElementById("submit1").disabled = false;
             }
 
             document.addEventListener("DOMContentLoaded", function () {

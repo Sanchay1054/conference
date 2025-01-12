@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/registrations.css">
-    <title>Document</title>
+    <title>Submission Details</title>
+    <link rel="icon" href="./Components/logo.png" type="image/x-icon">
     <style>
         table {
             /* width: 100vw; */
@@ -31,6 +32,7 @@
     <table id="submissionTable">
         <thead>
             <tr>
+                <th>S.No.</th>
                 <th>Timestamp (IST)</th>
                 <th>Title</th>
                 <th>Abstract</th>
@@ -58,7 +60,7 @@
                 tableBody.innerHTML = '';
     
                 // Populate the table with the fetched data
-                registrations.forEach((registration) => {
+                registrations.forEach((registration,j) => {
                         authorDetails = "";
                         for(i=0; i<registration.name.length; i++)
                         {
@@ -68,6 +70,7 @@
                     const row = document.createElement('tr');
                     // row.className = "submissiontd";
                     row.innerHTML = `
+                        <td>${j+1}</td>
                         <td>${registration.time}</td>
                         <td>${registration.title}</td>
                         <td class='submissiontd'>${registration.abstract}</td>

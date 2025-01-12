@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./Styles/conferencetheme.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Article</title>
+    <link rel="icon" href="./Components/logo.png" type="image/x-icon">
 </head>
 <body>
     <div id="load"><div class="loader"><img src="Components/logo.png" alt="Loading"/>Loading...</div></div>
@@ -59,15 +60,43 @@
     </nav>
     </div>
     <div class="container">
-        <div class="submissionhead">Full Length Article</div>
+        <div class="submissionhead">Submission</div>
         <div class="submissiontext">
-            Submit the article in the below Link.<br>
-            <a href="https://cmt3.research.microsoft.com/ICAMAC2025" class="button" target="_blank">ICAMAC2025 <i class="bi bi-arrow-bar-right"></i></a>
-            Create a new Login in CMT if you are a new user.
+            All Submissions must be done through Conference Management Toolkit (CMT)<br>Create a new Login in CMT if you are a new user<br>Please send your paper to Microsoft CMT<br>No submission through MAIL will be entertained<br>
+            <a href="https://cmt3.research.microsoft.com/ICAMAC2025" class="button" target="_blank">CMT ICAMAC2025 <i class="bi bi-arrow-bar-right"></i></a>
+            
         </div>
         <div class="submissionhead" id="template">Template</div>
         <div class="submissiontext">
             <a href="Sample_Template_ICAMAC2025.docx" download="Sample_Template_ICAMAC2025.docx">Click to download the Template <i class="bi bi-cloud-arrow-down-fill"></i></a>
+        </div>
+    </div>
+
+    <div class="author">
+        <div class="authortext">
+            <div class="submissionhead">Author Guidelines:</div>
+            <div class="authort fade-in-section">
+                <ul>
+                    <li>Plagiarism must be less than 10% (excluding references). Plagiarism will be 
+checked for conference presentation and publication. </li>
+<li>The use of AI-generated writing, including ChatGPT is strictly prohibited. </li>
+<li>There must be no grammatical errors. High language clarity is expected, and a 
+language expert should review the final manuscript. Any disputes may lead to direct 
+rejection by the journal. </li>
+<li>Figure or table should NOT be copied from any other paper or the internet. This 
+activity may lead to direct rejection. Ensure that the figures are of high resolution. </li>
+<li>Page limit: Maximum six pages, adhering to the journal
+template. </li>
+<li>Each paper must include an abstract (150-250 words) and 5-6 keywords. </li>
+<li>All reference numbers/citations must be properly cited within the manuscript. </li>
+<li>Ensure that all references are cited in the body of the paper. </li>
+<li>Ensure that all figures and tables are numbered in proper order  </li>
+<li>NO table should be in image format. </li>
+<li>All mathematical equations must be prepared using a math editor; no equation 
+should be in image format. </li>
+<li>Maintain high-quality (HD) figures.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -87,6 +116,23 @@
         navMenu.classList.toggle("active");
     });
 });
+
+const sections = document.querySelectorAll('.fade-in-section');
+
+const observer = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the visible class and stop observing
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Unobserve to ensure it only triggers once
+            }
+        });
+    },
+    { threshold: 0.2 } // Trigger when 10% of the element is visible
+);
+
+sections.forEach(section => observer.observe(section));
     </script>
 </body>
 </html>
